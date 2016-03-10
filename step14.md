@@ -1,4 +1,4 @@
-{{#template name="intermediate-step1"}}
+{{#template name="intermediate-step14"}}
 
 # FlowRouter Parameters
 
@@ -24,7 +24,7 @@ Open up the `lib/routes.js` file and let's specify a new `FlowRouter.route` for 
 
 {{> DiffBox tutorialName="intermediate" step="14.2"}}
 
-Specify a parameter in the route with by using a `:` as in `:id` or `:_id` if you want to identically match the property we are accessing. 
+Specify a parameter in the route with by using a `:` as in `:id` or `:_id` if you want to identically match the property we are accessing.
 
 Let's also update the template being rendered to our `main` section to `'RecipeSingle'` which we'll create next.
 

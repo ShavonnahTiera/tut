@@ -5,10 +5,10 @@ if (Meteor.isClient) {
   });
 }
 
-TutorialRegistry.registerTutorial("blaze", {
+TutorialRegistry.registerTutorial("intermediate-meteor", {
   title: "Intermediate Meteor",
   subtitle: "Build a recipe app with Scott from Level Up Tutorials",
-  tutorialSourceLink: "github.com/ShavonnahTiera/intermediate",
+  tutorialSourceLink: "github.com/meteor/tut",
   steps: [
     {
       title: 'What we are creating',
