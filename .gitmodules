@@ -1,0 +1,6 @@
+[submodule "repo"]
+	path = repo
+	url = https://github.com/ShavonnahTiera/intermediate
+[submodule "code"]
+	path = code
+	url = https://github.com/ShavonnahTiera/intermediate
