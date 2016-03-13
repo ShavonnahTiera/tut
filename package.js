@@ -52,11 +52,9 @@ Package.onUse(function (api) {
 
     'generated/intermediate.multi.patch',
   ], 'client');
-<<<<<<< HEAD
 
   api.export('TUTORIAL_PAGES');
 
   api.export('INTERMEDIATE_TUT');
-=======
->>>>>>> e7eba0f9fdd016e959fb37b7e21d1938319abdb0
+
 });

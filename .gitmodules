@@ -3,4 +3,4 @@
 	url = https://github.com/ShavonnahTiera/intermediate
 [submodule "code"]
 	path = code
-	url = https://github.com/ShavonnahTiera/intermediate
+	url = https://github.com/meteor-tuts/intermediate.git
