@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 From 4fbf04a2e2fd3c71437141f0c1a94cf9d3faa5a7 Mon Sep 17 00:00:00 2001
 From: Sashko Stubailo <sashko@stubailo.com>
 Date: Thu, 10 Mar 2016 11:20:27 -0800
@@ -3376,4 +3377,3085 @@ index 9016a5d..c1c2095 100644
  });
 -- 
 2.5.4 (Apple Git-61)
+=======
+From ee7e22019745750c4cf0228b5a0dce297980f09f Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Sun, 28 Feb 2016 17:45:18 -0800
+Subject: [PATCH 01/83] Step 2.1: Add curated packages
+
+---
+ .meteor/packages | 18 ++++++++++++++++--
+ .meteor/versions | 39 +++++++++++++++++++++++++++++++++++++--
+ 2 files changed, 53 insertions(+), 4 deletions(-)
+
+diff --git a/.meteor/packages b/.meteor/packages
+index a9f8340..8f60832 100644
+--- a/.meteor/packages
++++ b/.meteor/packages
+@@ -16,5 +16,19 @@ standard-minifiers      # JS/CSS minifiers run for production mode
+ es5-shim                # ECMAScript 5 compatibility for older browsers.
+ ecmascript              # Enable ECMAScript2015+ syntax in app code
+ 
+-autopublish             # Publish all data to the clients (for prototyping)
+-insecure                # Allow all DB writes from clients (for prototyping)
++kadira:flow-router
++kadira:blaze-layout
++erasaur:meteor-lodash
++stolinski:stylus-multi
++fortawesome:fontawesome
++spiderable
++fastclick
++raix:handlebar-helpers
++aldeed:collection2
++aldeed:autoform
++accounts-ui
++accounts-password
++matb33:bootstrap-glyphicons
++msavin:jetsetter
++zimme:active-route
++gwendall:auth-client-callbacks
+\ No newline at end of file
+diff --git a/.meteor/versions b/.meteor/versions
+index 17859ef..57a7b54 100644
+--- a/.meteor/versions
++++ b/.meteor/versions
+@@ -1,4 +1,13 @@
+-autopublish@1.0.4
++accounts-base@1.2.2
++accounts-password@1.1.4
++accounts-ui@1.1.6
++accounts-ui-unstyled@1.1.8
++aldeed:autoform@5.8.1
++aldeed:collection2@2.9.0
++aldeed:collection2-core@1.1.0
++aldeed:schema-deny@1.0.1
++aldeed:schema-index@1.0.1
++aldeed:simple-schema@1.5.3
+ autoupdate@1.2.4
+ babel-compiler@5.8.24_1
+ babel-runtime@0.1.4
+@@ -12,50 +21,75 @@ caching-compiler@1.0.0
+ caching-html-compiler@1.0.2
+ callback-hook@1.0.4
+ check@1.1.0
++coffeescript@1.0.11
++cosmos:browserify@0.9.4
+ ddp@1.2.2
+ ddp-client@1.2.1
+ ddp-common@1.2.2
++ddp-rate-limiter@1.0.0
+ ddp-server@1.2.2
+ deps@1.0.9
+ diff-sequence@1.0.1
+ ecmascript@0.1.6
+ ecmascript-runtime@0.2.6
+ ejson@1.0.7
++email@1.0.8
++erasaur:meteor-lodash@4.0.0
+ es5-shim@4.1.14
+ fastclick@1.0.7
++fortawesome:fontawesome@4.5.0
+ geojson-utils@1.0.4
++gwendall:auth-client-callbacks@0.1.0
+ hot-code-push@1.0.0
+ html-tools@1.0.5
+ htmljs@1.0.5
+ http@1.1.1
+ id-map@1.0.4
+-insecure@1.0.4
+ jquery@1.11.4
++kadira:blaze-layout@2.3.0
++kadira:flow-router@2.10.1
+ launch-screen@1.0.4
++less@2.5.1
+ livedata@1.0.15
++localstorage@1.0.5
+ logging@1.0.8
++matb33:bootstrap-base@10.0.0
++matb33:bootstrap-glyphicons@10.0.0
++mdg:validation-error@0.2.0
+ meteor@1.1.10
+ meteor-base@1.0.1
++meteortoys:toykit@2.2.1
+ minifiers@1.1.7
+ minimongo@1.0.10
+ mobile-experience@1.0.1
+ mobile-status-bar@1.0.6
++momentjs:moment@2.10.6
+ mongo@1.1.3
+ mongo-id@1.0.1
++msavin:jetsetter@1.5.2
++npm-bcrypt@0.7.8_2
+ npm-mongo@1.4.39_1
+ observe-sequence@1.0.7
+ ordered-dict@1.0.4
+ promise@0.5.1
++raix:eventemitter@0.1.3
++raix:handlebar-helpers@0.2.5
+ random@1.0.5
++rate-limit@1.0.0
+ reactive-dict@1.1.3
+ reactive-var@1.0.6
+ reload@1.1.4
+ retry@1.0.4
+ routepolicy@1.0.6
++service-configuration@1.0.5
+ session@1.1.1
++sha@1.0.4
+ spacebars@1.0.7
+ spacebars-compiler@1.0.7
++spiderable@1.0.9
++srp@1.0.4
+ standard-minifiers@1.0.2
++stolinski:stylus-multi@1.4.3
+ templating@1.1.5
+ templating-tools@1.0.0
+ tracker@1.0.9
+@@ -64,3 +98,4 @@ underscore@1.0.4
+ url@1.0.5
+ webapp@1.2.3
+ webapp-hashing@1.0.5
++zimme:active-route@2.3.2
+-- 
+2.2.1
+
+
+From 5ad57166840386bf708e662fcff9b93482fb2675 Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Sun, 28 Feb 2016 20:27:34 -0800
+Subject: [PATCH 02/83] Step 3.1: Create a server side startup function
+
+---
+ server/init.js | 3 +++
+ 1 file changed, 3 insertions(+)
+ create mode 100644 server/init.js
+
+diff --git a/server/init.js b/server/init.js
+new file mode 100644
+index 0000000..41147dd
+--- /dev/null
++++ b/server/init.js
+@@ -0,0 +1,3 @@
++Meteor.startup(function () {
++	
++});
+\ No newline at end of file
+-- 
+2.2.1
+
+
+From d0d062055301828a6b2cd30bf9d7a7587cfb0f8f Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Sun, 28 Feb 2016 20:28:40 -0800
+Subject: [PATCH 03/83] Step 3.2: Customize the folder structure
+
+---
+ index.html        | 14 ++++++++++++++
+ intermediate.css  |  1 -
+ intermediate.html | 14 --------------
+ intermediate.js   | 18 ------------------
+ server/publish.js |  0
+ styles.styl       |  1 +
+ 6 files changed, 15 insertions(+), 33 deletions(-)
+ create mode 100644 index.html
+ delete mode 100644 intermediate.css
+ delete mode 100644 intermediate.html
+ create mode 100644 server/publish.js
+ create mode 100644 styles.styl
+
+diff --git a/index.html b/index.html
+new file mode 100644
+index 0000000..9bfe08c
+--- /dev/null
++++ b/index.html
+@@ -0,0 +1,14 @@
++<head>
++  <title>intermediate</title>
++</head>
++
++<body>
++  <h1>Welcome to Meteor!</h1>
++
++  {{> hello}}
++</body>
++
++<template name="hello">
++  <button>Click Me</button>
++  <p>You've pressed the button {{counter}} times.</p>
++</template>
+diff --git a/intermediate.css b/intermediate.css
+deleted file mode 100644
+index b6b4052..0000000
+--- a/intermediate.css
++++ /dev/null
+@@ -1 +0,0 @@
+-/* CSS declarations go here */
+diff --git a/intermediate.html b/intermediate.html
+deleted file mode 100644
+index 9bfe08c..0000000
+--- a/intermediate.html
++++ /dev/null
+@@ -1,14 +0,0 @@
+-<head>
+-  <title>intermediate</title>
+-</head>
+-
+-<body>
+-  <h1>Welcome to Meteor!</h1>
+-
+-  {{> hello}}
+-</body>
+-
+-<template name="hello">
+-  <button>Click Me</button>
+-  <p>You've pressed the button {{counter}} times.</p>
+-</template>
+diff --git a/intermediate.js b/intermediate.js
+index 4f8c65d..d786f48 100644
+--- a/intermediate.js
++++ b/intermediate.js
+@@ -1,21 +1,3 @@
+-if (Meteor.isClient) {
+-  // counter starts at 0
+-  Session.setDefault('counter', 0);
+-
+-  Template.hello.helpers({
+-    counter: function () {
+-      return Session.get('counter');
+-    }
+-  });
+-
+-  Template.hello.events({
+-    'click button': function () {
+-      // increment the counter when button is clicked
+-      Session.set('counter', Session.get('counter') + 1);
+-    }
+-  });
+-}
+-
+ if (Meteor.isServer) {
+   Meteor.startup(function () {
+     // code to run on server at startup
+diff --git a/server/publish.js b/server/publish.js
+new file mode 100644
+index 0000000..e69de29
+diff --git a/styles.styl b/styles.styl
+new file mode 100644
+index 0000000..b6b4052
+--- /dev/null
++++ b/styles.styl
+@@ -0,0 +1 @@
++/* CSS declarations go here */
+-- 
+2.2.1
+
+
+From 5815946d95aae5c389e9207df156460047442380 Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Sun, 28 Feb 2016 20:34:41 -0800
+Subject: [PATCH 04/83] Step 4.1: Remove default code from index.html
+
+---
+ index.html | 11 -----------
+ 1 file changed, 11 deletions(-)
+
+diff --git a/index.html b/index.html
+index 9bfe08c..2bc5d43 100644
+--- a/index.html
++++ b/index.html
+@@ -1,14 +1,3 @@
+ <head>
+   <title>intermediate</title>
+ </head>
+-
+-<body>
+-  <h1>Welcome to Meteor!</h1>
+-
+-  {{> hello}}
+-</body>
+-
+-<template name="hello">
+-  <button>Click Me</button>
+-  <p>You've pressed the button {{counter}} times.</p>
+-</template>
+-- 
+2.2.1
+
+
+From f857662d6467d013329d0ab429234b0c7b7d73f8 Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Sun, 28 Feb 2016 20:37:33 -0800
+Subject: [PATCH 05/83] Step 4.2: Create a MainLayout
+
+---
+ client/layouts/MainLayout.html | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+ create mode 100644 client/layouts/MainLayout.html
+
+diff --git a/client/layouts/MainLayout.html b/client/layouts/MainLayout.html
+new file mode 100644
+index 0000000..cd6966e
+--- /dev/null
++++ b/client/layouts/MainLayout.html
+@@ -0,0 +1,9 @@
++ <template name="MainLayout">
++ 	<header>
++ 		<h1>My Recipe Book</h1>
++ 		{{> loginButtons}}
++ 	</header>
++ 	<main>
++		{{> Template.dynamic template=main}}
++ 	</main>
++ </template>
+\ No newline at end of file
+-- 
+2.2.1
+
+
+From b8b89dfba3e98f726970a16fcd258db12501f756 Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Sun, 28 Feb 2016 21:09:58 -0800
+Subject: [PATCH 06/83] Step 4.3: Create a master home layout
+
+---
+ client/layouts/HomeLayout.html | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+ create mode 100644 client/layouts/HomeLayout.html
+
+diff --git a/client/layouts/HomeLayout.html b/client/layouts/HomeLayout.html
+new file mode 100644
+index 0000000..226aab1
+--- /dev/null
++++ b/client/layouts/HomeLayout.html
+@@ -0,0 +1,11 @@
++<template name="HomeLayout">	
++	<header>
++		<h1>My Recipe Book</h1>
++		{{> loginButtons}}
++	</header>
++		<main>
++			<div class="billboard">
++				<h2>Organize your Meals</h2>
++			</div>
++		</main>
++</template>
+\ No newline at end of file
+-- 
+2.2.1
+
+
+From bbc8723e95319fc3e0aca91b01594bfe3c1b7161 Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Sun, 28 Feb 2016 21:38:42 -0800
+Subject: [PATCH 07/83] Step 5.1: Create the home route
+
+---
+ lib/routes.js | 6 ++++++
+ 1 file changed, 6 insertions(+)
+ create mode 100644 lib/routes.js
+
+diff --git a/lib/routes.js b/lib/routes.js
+new file mode 100644
+index 0000000..371ae64
+--- /dev/null
++++ b/lib/routes.js
+@@ -0,0 +1,6 @@
++FlowRouter.route('/', {
++	name: 'home',
++	action() {
++		BlazeLayout.render('HomeLayout');
++	}
++});
+\ No newline at end of file
+-- 
+2.2.1
+
+
+From f110037d0add8f3dc0f82cffec50a3573d6b52fc Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Sun, 28 Feb 2016 21:59:18 -0800
+Subject: [PATCH 08/83] Step 5.2: Create a generic template to see how dynamic
+ template rendering works
+
+---
+ client/layouts/MainLayout.html | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+diff --git a/client/layouts/MainLayout.html b/client/layouts/MainLayout.html
+index cd6966e..3972048 100644
+--- a/client/layouts/MainLayout.html
++++ b/client/layouts/MainLayout.html
+@@ -6,4 +6,8 @@
+  	<main>
+ 		{{> Template.dynamic template=main}}
+  	</main>
+- </template>
+\ No newline at end of file
++ </template>
++
++<template name="Test">
++	Hello!!!
++</template>
+\ No newline at end of file
+-- 
+2.2.1
+
+
+From 193f07a8dd65030310d57722c5b394df072b5fa7 Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Sun, 28 Feb 2016 22:04:52 -0800
+Subject: [PATCH 09/83] Step 5.3: Create a route to test our dynamic template
+ routing
+
+---
+ lib/routes.js | 7 +++++++
+ 1 file changed, 7 insertions(+)
+
+diff --git a/lib/routes.js b/lib/routes.js
+index 371ae64..6d53c73 100644
+--- a/lib/routes.js
++++ b/lib/routes.js
+@@ -3,4 +3,11 @@ FlowRouter.route('/', {
+ 	action() {
+ 		BlazeLayout.render('HomeLayout');
+ 	}
++});
++
++FlowRouter.route('/test', {
++	name: 'test',
++	action() {
++		BlazeLayout.render('MainLayout', {main: 'Test'});
++	}
+ });
+\ No newline at end of file
+-- 
+2.2.1
+
+
+From 180965574f2bc7f3ef7ee05c66c7d9b97c434ae8 Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Sun, 28 Feb 2016 22:42:01 -0800
+Subject: [PATCH 10/83] Step 6.1: Intermediate collections with SimpleSchema
+
+---
+ collections/recipes.js | 28 ++++++++++++++++++++++++++++
+ 1 file changed, 28 insertions(+)
+ create mode 100644 collections/recipes.js
+
+diff --git a/collections/recipes.js b/collections/recipes.js
+new file mode 100644
+index 0000000..c706ac0
+--- /dev/null
++++ b/collections/recipes.js
+@@ -0,0 +1,28 @@
++Recipes = new Mongo.Collection('recipes');
++
++RecipeSchema = new SimpleSchema({
++	name: {
++		type: String,
++		label: "Name"
++	},
++	desc: {
++		type: String,
++		label: "Description"
++	},
++	author: {
++		type: String,
++		label: "Author",
++		autoValue: function () {
++			return this.userId
++		}
++	},
++	createdAt: {
++		type: Date,
++		label: "Created At",
++		autoValue: function() {
++			return new Date()
++		}
++	}
++});
++
++Recipes.attachSchema(RecipeSchema);
+\ No newline at end of file
+-- 
+2.2.1
+
+
+From 97b46f9116f7d51a3559b92558e6a996ab7d26cd Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Sun, 28 Feb 2016 23:00:42 -0800
+Subject: [PATCH 11/83] Step 7.1: Remove the test template
+
+---
+ client/layouts/MainLayout.html | 4 ----
+ 1 file changed, 4 deletions(-)
+
+diff --git a/client/layouts/MainLayout.html b/client/layouts/MainLayout.html
+index 3972048..a08d5c1 100644
+--- a/client/layouts/MainLayout.html
++++ b/client/layouts/MainLayout.html
+@@ -7,7 +7,3 @@
+ 		{{> Template.dynamic template=main}}
+  	</main>
+  </template>
+-
+-<template name="Test">
+-	Hello!!!
+-</template>
+\ No newline at end of file
+-- 
+2.2.1
+
+
+From 0237bb5ac6f7cd3fe83e9a5971b8e96a65a08b02 Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Sun, 28 Feb 2016 23:03:12 -0800
+Subject: [PATCH 12/83] Step 7.2: Add a route for our recipe book
+
+---
+ lib/routes.js | 6 +++---
+ 1 file changed, 3 insertions(+), 3 deletions(-)
+
+diff --git a/lib/routes.js b/lib/routes.js
+index 6d53c73..3d6f4e5 100644
+--- a/lib/routes.js
++++ b/lib/routes.js
+@@ -5,9 +5,9 @@ FlowRouter.route('/', {
+ 	}
+ });
+ 
+-FlowRouter.route('/test', {
+-	name: 'test',
++FlowRouter.route('/recipe-book', {
++	name: 'recipe-book',
+ 	action() {
+-		BlazeLayout.render('MainLayout', {main: 'Test'});
++		BlazeLayout.render('MainLayout', {main: 'Recipes'});
+ 	}
+ });
+\ No newline at end of file
+-- 
+2.2.1
+
+
+From a0d29c1b7e7f8b770b5609eb14bdc933cc84d4e6 Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Sun, 28 Feb 2016 23:37:23 -0800
+Subject: [PATCH 13/83] Step 7.3: Create Recipes.html template
+
+---
+ client/recipes/Recipes.html | 3 +++
+ 1 file changed, 3 insertions(+)
+ create mode 100644 client/recipes/Recipes.html
+
+diff --git a/client/recipes/Recipes.html b/client/recipes/Recipes.html
+new file mode 100644
+index 0000000..17d72da
+--- /dev/null
++++ b/client/recipes/Recipes.html
+@@ -0,0 +1,3 @@
++<template name="Recipes">
++	{{> NewRecipe}}
++</template>
+\ No newline at end of file
+-- 
+2.2.1
+
+
+From 8be62fbf77615469a8024ba76c62470c02f03228 Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Sun, 28 Feb 2016 23:38:05 -0800
+Subject: [PATCH 14/83] Step 7.4: Create NewRecipe.html template
+
+---
+ client/recipes/NewRecipe.html | 5 +++++
+ 1 file changed, 5 insertions(+)
+ create mode 100644 client/recipes/NewRecipe.html
+
+diff --git a/client/recipes/NewRecipe.html b/client/recipes/NewRecipe.html
+new file mode 100644
+index 0000000..2fb78a6
+--- /dev/null
++++ b/client/recipes/NewRecipe.html
+@@ -0,0 +1,5 @@
++<template name="NewRecipe">
++	<div class="new-recipe-container">
++		{{> quickForm collection="Recipes" id="insertRecipeForm" type="insert" class="new-recipe-form"}}
++	</div>
++</template>
+\ No newline at end of file
+-- 
+2.2.1
+
+
+From cb55f1c786af2f87e4b42b443214b27756723e7b Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Sun, 28 Feb 2016 23:38:59 -0800
+Subject: [PATCH 15/83] Step 7.5: Hide form fields
+
+---
+ collections/recipes.js | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/collections/recipes.js b/collections/recipes.js
+index c706ac0..3f3e6ea 100644
+--- a/collections/recipes.js
++++ b/collections/recipes.js
+@@ -14,6 +14,9 @@ RecipeSchema = new SimpleSchema({
+ 		label: "Author",
+ 		autoValue: function () {
+ 			return this.userId
++		},
++		autoform: {
++			type: "hidden"
+ 		}
+ 	},
+ 	createdAt: {
+@@ -21,6 +24,9 @@ RecipeSchema = new SimpleSchema({
+ 		label: "Created At",
+ 		autoValue: function() {
+ 			return new Date()
++		},
++		autoform: {
++			type: "hidden"
+ 		}
+ 	}
+ });
+-- 
+2.2.1
+
+
+From c268adf11ab071d69ab518daadb775ec6d147853 Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Mon, 29 Feb 2016 00:21:12 -0800
+Subject: [PATCH 16/83] Step 8.1: Create a publication for recipes.
+
+---
+ server/publish.js | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/server/publish.js b/server/publish.js
+index e69de29..088329c 100644
+--- a/server/publish.js
++++ b/server/publish.js
+@@ -0,0 +1,3 @@
++Meteor.publish('recipes', function(){
++	return Recipes.find({author: this.userId});
++});
+\ No newline at end of file
+-- 
+2.2.1
+
+
+From 67a6323951204220e9052d20d6f115b22e898c23 Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Mon, 29 Feb 2016 00:22:14 -0800
+Subject: [PATCH 17/83] Step 8.2: Add the Meteor Toys package
+
+---
+ .meteor/packages |  4 ++--
+ .meteor/versions | 18 ++++++++++++++++++
+ 2 files changed, 20 insertions(+), 2 deletions(-)
+
+diff --git a/.meteor/packages b/.meteor/packages
+index 8f60832..6488d16 100644
+--- a/.meteor/packages
++++ b/.meteor/packages
+@@ -29,6 +29,6 @@ aldeed:autoform
+ accounts-ui
+ accounts-password
+ matb33:bootstrap-glyphicons
+-msavin:jetsetter
+ zimme:active-route
+-gwendall:auth-client-callbacks
+\ No newline at end of file
++gwendall:auth-client-callbacks
++meteortoys:allthings
+\ No newline at end of file
+diff --git a/.meteor/versions b/.meteor/versions
+index 57a7b54..3816c44 100644
+--- a/.meteor/versions
++++ b/.meteor/versions
+@@ -23,6 +23,7 @@ callback-hook@1.0.4
+ check@1.1.0
+ coffeescript@1.0.11
+ cosmos:browserify@0.9.4
++dburles:mongo-collection-instances@0.3.4
+ ddp@1.2.2
+ ddp-client@1.2.1
+ ddp-common@1.2.2
+@@ -40,6 +41,7 @@ fastclick@1.0.7
+ fortawesome:fontawesome@4.5.0
+ geojson-utils@1.0.4
+ gwendall:auth-client-callbacks@0.1.0
++gwendall:body-events@0.1.6
+ hot-code-push@1.0.0
+ html-tools@1.0.5
+ htmljs@1.0.5
+@@ -48,6 +50,7 @@ id-map@1.0.4
+ jquery@1.11.4
+ kadira:blaze-layout@2.3.0
+ kadira:flow-router@2.10.1
++lai:collection-extensions@0.1.4
+ launch-screen@1.0.4
+ less@2.5.1
+ livedata@1.0.15
+@@ -58,6 +61,20 @@ matb33:bootstrap-glyphicons@10.0.0
+ mdg:validation-error@0.2.0
+ meteor@1.1.10
+ meteor-base@1.0.1
++meteortoys:allthings@2.3.1
++meteortoys:authenticate@2.1.0
++meteortoys:autopub@2.1.0
++meteortoys:blueprint@2.1.0
++meteortoys:email@2.1.0
++meteortoys:hotreload@2.1.0
++meteortoys:listen@2.1.0
++meteortoys:method@3.0.2
++meteortoys:pub@3.0.2
++meteortoys:result@2.1.0
++meteortoys:shell@2.1.0
++meteortoys:status@2.1.0
++meteortoys:sub@2.1.0
++meteortoys:throttle@2.1.0
+ meteortoys:toykit@2.2.1
+ minifiers@1.1.7
+ minimongo@1.0.10
+@@ -67,6 +84,7 @@ momentjs:moment@2.10.6
+ mongo@1.1.3
+ mongo-id@1.0.1
+ msavin:jetsetter@1.5.2
++msavin:mongol@1.6.2
+ npm-bcrypt@0.7.8_2
+ npm-mongo@1.4.39_1
+ observe-sequence@1.0.7
+-- 
+2.2.1
+
+
+From d5118da4778e08cde59d1371ea0b1ee9be801398 Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Mon, 29 Feb 2016 00:41:41 -0800
+Subject: [PATCH 18/83] Step 8.3: Add an allow rule to add data to the
+ collection via the quickForm.
+
+---
+ collections/recipes.js | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/collections/recipes.js b/collections/recipes.js
+index 3f3e6ea..513b91d 100644
+--- a/collections/recipes.js
++++ b/collections/recipes.js
+@@ -1,5 +1,11 @@
+ Recipes = new Mongo.Collection('recipes');
+ 
++Recipes.allow({
++	insert: function(userId, doc) {
++		return !!userId;
++	}
++});
++
+ RecipeSchema = new SimpleSchema({
+ 	name: {
+ 		type: String,
+-- 
+2.2.1
+
+
+From ad3a445018a2a8aa788b9396867813d07b26bd46 Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Mon, 29 Feb 2016 00:49:44 -0800
+Subject: [PATCH 19/83] Step 8.4: Subscribe to recipes
+
+---
+ client/recipes.js | 1 +
+ 1 file changed, 1 insertion(+)
+ create mode 100644 client/recipes.js
+
+diff --git a/client/recipes.js b/client/recipes.js
+new file mode 100644
+index 0000000..f6a47b0
+--- /dev/null
++++ b/client/recipes.js
+@@ -0,0 +1 @@
++Meteor.subscribe('recipes');
+\ No newline at end of file
+-- 
+2.2.1
+
+
+From b3cc9779ca86c112f3d249c24940b33ba880caf3 Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Mon, 29 Feb 2016 01:20:19 -0800
+Subject: [PATCH 20/83] Step 9.1: Create an ingredients sub-document
+
+---
+ collections/recipes.js | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+
+diff --git a/collections/recipes.js b/collections/recipes.js
+index 513b91d..89ae2b6 100644
+--- a/collections/recipes.js
++++ b/collections/recipes.js
+@@ -6,6 +6,15 @@ Recipes.allow({
+ 	}
+ });
+ 
++Ingredient = new SimpleSchema({
++	name: {
++		type: String 
++	},
++	amount: {
++		type: String
++	}
++});
++
+ RecipeSchema = new SimpleSchema({
+ 	name: {
+ 		type: String,
+@@ -15,6 +24,9 @@ RecipeSchema = new SimpleSchema({
+ 		type: String,
+ 		label: "Description"
+ 	},
++	ingredients: {
++		type: [Ingredient]
++	},
+ 	author: {
+ 		type: String,
+ 		label: "Author",
+-- 
+2.2.1
+
+
+From 39d42cd62a913e4ab4743342c3bfa551f0fc81ea Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Mon, 29 Feb 2016 01:30:19 -0800
+Subject: [PATCH 21/83] Step 9.2: Add inMenu property to the Recipes Schema to
+ flag a recipe to be in the weekly menu
+
+---
+ collections/recipes.js | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+
+diff --git a/collections/recipes.js b/collections/recipes.js
+index 89ae2b6..f4cb3c7 100644
+--- a/collections/recipes.js
++++ b/collections/recipes.js
+@@ -27,6 +27,14 @@ RecipeSchema = new SimpleSchema({
+ 	ingredients: {
+ 		type: [Ingredient]
+ 	},
++	inMenu: {
++		type: Boolean,
++		defaultValue: false,
++		optional: true,
++		autoform: {
++			type: "hidden"
++		}
++	},
+ 	author: {
+ 		type: String,
+ 		label: "Author",
+-- 
+2.2.1
+
+
+From 7cd8b9e40f54b72846b935355ccad815e70d2456 Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Mon, 29 Feb 2016 02:27:37 -0800
+Subject: [PATCH 22/83] Step 10.1: Create a file for your public and private
+ keys
+
+---
+ settings.json | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+ create mode 100644 settings.json
+
+diff --git a/settings.json b/settings.json
+new file mode 100644
+index 0000000..57740b4
+--- /dev/null
++++ b/settings.json
+@@ -0,0 +1,12 @@
++{
++	"public": {
++		"ga": {
++			"account": "UA- XXXXXXXX-X"
++		}
++	},
++	"private": {
++		"stripe": {
++			"apiPrivate": "apikey"
++			}
++		}
++}
+\ No newline at end of file
+-- 
+2.2.1
+
+
+From 218538ce8de41abbaaf9d582855ab9c689c8cc1f Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Mon, 29 Feb 2016 02:29:03 -0800
+Subject: [PATCH 23/83] Step 10.2: Add Google Analytics package
+
+---
+ .meteor/packages | 3 ++-
+ .meteor/versions | 1 +
+ 2 files changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/.meteor/packages b/.meteor/packages
+index 6488d16..57dd5db 100644
+--- a/.meteor/packages
++++ b/.meteor/packages
+@@ -31,4 +31,5 @@ accounts-password
+ matb33:bootstrap-glyphicons
+ zimme:active-route
+ gwendall:auth-client-callbacks
+-meteortoys:allthings
+\ No newline at end of file
++meteortoys:allthings
++datariot:ganalytics
+\ No newline at end of file
+diff --git a/.meteor/versions b/.meteor/versions
+index 3816c44..d99c111 100644
+--- a/.meteor/versions
++++ b/.meteor/versions
+@@ -23,6 +23,7 @@ callback-hook@1.0.4
+ check@1.1.0
+ coffeescript@1.0.11
+ cosmos:browserify@0.9.4
++datariot:ganalytics@0.2.1
+ dburles:mongo-collection-instances@0.3.4
+ ddp@1.2.2
+ ddp-client@1.2.1
+-- 
+2.2.1
+
+
+From 7e826b5bfdcfac55a15e0554ad34f646d3f5b01c Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Mon, 29 Feb 2016 02:32:19 -0800
+Subject: [PATCH 24/83] Step 10.3: Add Google Analytics to the routes
+
+---
+ lib/routes.js | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/lib/routes.js b/lib/routes.js
+index 3d6f4e5..582d785 100644
+--- a/lib/routes.js
++++ b/lib/routes.js
+@@ -1,6 +1,7 @@
+ FlowRouter.route('/', {
+ 	name: 'home',
+ 	action() {
++		GAnalytics.pageview();
+ 		BlazeLayout.render('HomeLayout');
+ 	}
+ });
+@@ -8,6 +9,7 @@ FlowRouter.route('/', {
+ FlowRouter.route('/recipe-book', {
+ 	name: 'recipe-book',
+ 	action() {
++		GAnalytics.pageview();
+ 		BlazeLayout.render('MainLayout', {main: 'Recipes'});
+ 	}
+ });
+\ No newline at end of file
+-- 
+2.2.1
+
+
+From c4fc311a81fb5ef1724c3ce63b729c560dd9c284 Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Mon, 29 Feb 2016 02:40:06 -0800
+Subject: [PATCH 25/83] Step 11.1: Add predefined css to styles.styl
+
+---
+ styles.styl | 392 +++++++++++++++++++++++++++++++++++++++++++++++++++++++++++-
+ 1 file changed, 391 insertions(+), 1 deletion(-)
+
+diff --git a/styles.styl b/styles.styl
+index b6b4052..38eb553 100644
+--- a/styles.styl
++++ b/styles.styl
+@@ -1 +1,391 @@
+-/* CSS declarations go here */
++normalize-css()
++
++// Material Shadows
++shadow-level(l = 1)
++    if l == -1
++        box-shadow: inset -2px 7px 9px -7px rgba(0,0,0,0.7);
++    if l == 0
++        box-shadow: none;
++    if l == 1
++        box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
++    if l == 2
++        box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
++    if l == 3
++        box-shadow: 0 10px 20px rgba(0,0,0,0.19), 0 6px 6px rgba(0,0,0,0.23);
++    if l == 4
++        box-shadow: 0 14px 28px rgba(0,0,0,0.25), 0 10px 10px rgba(0,0,0,0.22);
++    if l == 5
++        box-shadow: 0 19px 38px rgba(0,0,0,0.30), 0 15px 12px rgba(0,0,0,0.22);
++
++// Common Transition
++trans($sec = 0.3s)
++    transition: all $sec ease
++// Grid
++$xsmall = 340px
++$small = 500px
++$med = 700px
++$large = 960px
++$wide = 1200px
++
++// Colors
++black = #222
++grey = #D8D8D8
++light-grey = #EEE
++purp = #524763
++dark-purp = #373142
++red = #E54B4B
++teal = #82D8D8
++dark-teal = #66A6A6
++green = #CBE56C
++blue = #16528E
++bright-blue = #0082C8
++maroon = #6A2140
++light-red = #CA5765
++pink = #CF256D
++orange = #E8846B
++
++z = {
++    neg: -7,
++    lowest: 1,
++    low: 4,
++    mid: 5,
++    video: 6,
++    header: 7,
++    nav: 8,
++    mini: 9,
++    modal: 10,
++    highest: 11
++}
++
++social = {
++    twitter: #00aced,
++    facebook: #3b5998,
++    google: #dd4b39,
++    youtube: #bb0000
++}
++
++$side-nav = 100px
++$side-nav-large = 200px
++
++html
++    box-sizing: border-box
++
++*, *:before, *:after
++    box-sizing: inherit
++
++body
++    background light-grey
++    padding: 70px 0 150px
++
++header
++    color #FFF 
++    background: purp
++    padding 20px 
++    fixed top left
++    width 100%
++    height 70px  
++    z-index: z.header
++    shadow-level(2)
++    clearfix()
++    h1 
++        margin 0
++        font-size 1.6em 
++        float left
++    .login-buttons-dropdown-align-
++        float right
++        a
++            color #FFF
++            text-decoration none 
++
++p
++    color #333 
++
++.page-title
++    text-transform uppercase
++    text-align center
++    margin-bottom 30px 
++
++.billboard
++    background dark-purp
++    color #FFF
++    font-size 2em
++    text-align center
++    padding 60px 
++    h2
++        margin 0
++
++.main-layout
++    lost-center 90%
++    margin-top 20px 
++    +above($med)
++        lost-center 90%
++        padding-left $side-nav
++    +above($large)
++        lost-center 80%
++        margin-top 40px
++        padding-left $side-nav-large
++    
++.new-recipe
++    margin-bottom 20px 
++
++.new-recipe-container
++    position relative
++    background #FFF
++    padding 20px 
++    margin-bottom 20px 
++    shadow-level(2) 
++    .fa-close
++        position absolute
++        top 0
++        right 0
++        padding 20px   
++    label
++        display block
++        margin-bottom 10px 
++    textarea, input
++        width 100% 
++
++.btn, button
++    display inline-block
++    cursor pointer
++    background purp
++    color #FFF
++    text-decoration none
++    text-transform uppercase
++    padding 5px 15px
++    border solid 3px purp
++    border-radius 2px
++    font-weight 800
++    shadow-level(1)
++    trans()
++    &:hover
++        background @background - 20
++        border-color @background
++        shadow-level(2)
++    &.btn-primary
++        background teal
++        border-color teal
++        color dark-purp
++        &:hover
++            background @background - 40
++            border-color @background
++    &.btn-deny
++        background red
++        border solid 3px @background
++        &:hover
++            background @background - 20
++            border-color @background
++    &.btn-text
++        color purp
++        background transparent
++        border solid 2px purp
++        shadow-level(0)
++        &:hover
++            background teal
++            border-color @background
++            shadow-level(1)
++    &.btn-text-dark
++        color #FFF
++        background transparent
++        border solid 2px #FFF
++        shadow-level(0)
++        &:hover
++            background #FFF
++            color dark-purp 
++            border-color @background
++            shadow-level(1)
++    &.btn-confirmation
++        color black
++        background green
++        border solid 2px @background
++        &:hover
++            background @background - 20
++            border-color dark-purp
++    &.btn-cancel
++        color #FFF
++        background transparent
++        border solid 2px #FFF 
++        opacity 0.4
++        shadow-level(-1)
++        &:hover
++            background red
++            color #FFF
++            opacity 1
++            shadow-level(2)
++            border-color @background
++
++input, select, textarea
++    color purp
++    background #FFF
++    border solid 2px light-grey
++    border-radius 2px
++    font-weight 800
++    width 100% 
++    padding 6px 10px
++    margin-bottom 10px  
++    &.static-input
++        border none
++        background transparent
++
++.list-group
++    list-style none
++    padding 0
++    
++.panel-body
++    .form-group
++        lost-column 1/2 
++        
++.autoform-remove-item.btn
++    background light-grey
++    box-shadow none
++    border none
++    border-radius 50%
++    font-size 1em
++    height: 25px
++    width: 25px
++    text-align: center
++    display: block
++    padding: 0
++
++.autoform-add-item.btn
++    width 100%
++    border-radius 0
++    border none
++    box-shadow none
++    background light-grey
++     
++
++.autoform-remove-item-wrap
++    vertical-align middle 
++
++.side-nav
++    fixed bottom left
++    height 100px
++    width 100%
++    overflow hidden 
++    background dark-purp
++    color #FFF
++    z-index: z.header
++    shadow-level(2)
++    ul
++        margin 0
++        padding 0
++        display flex
++        justify-content space-between 
++        list-style none
++    a
++        color #FFF
++        text-decoration none
++        padding 20px 20px
++        display block
++        text-align center
++        trans()
++        &:hover, &.active
++            background purp 
++    i
++        display block
++        font-size 2em
++        margin-bottom 10px 
++    +above($med)
++        height 100%
++        z-index: z.mid
++        padding 120px 0
++        fixed top left
++        width $side-nav
++        ul 
++            display block
++        shadow-level(-1)
++        a
++            padding 20px 10px
++            &:hover, &.active
++                border-left 4px solid teal
++    +above($large)
++        width $side-nav-large
++        a
++            padding 20px 20px
++            &:hover, &.active
++                border-left 10px solid teal
++
++.recipe
++    background #FFF 
++    padding 0 20px 20px
++    margin-bottom 20px
++    position relative 
++    z-index 1
++    shadow-level(1)
++    trans()
++    .remove-from-menu
++        display none
++    &.in-menu
++        background teal
++        color #FFF
++        h3
++            border-bottom: rgba(255,255,255, 0.6) solid 3px
++        .add-to-menu
++            display none
++        .remove-from-menu  
++            display block
++    h3
++        font-size: 3em;
++        opacity: 0.3;
++        border-bottom: rgba(0,0,0, 0.3) solid 3px
++        margin-top 0
++        margin-bottom 10px 
++    button
++        margin-top 20px 
++    .fa-trash
++        opacity 0.3
++        cursor pointer
++        position absolute
++        top 0
++        right 0
++        font-size 1.6em  
++        display block
++        padding 20px 
++        color black
++        trans()
++        &:hover
++            color red 
++            opacity 0.6
++    .ingredient
++        display inline-block
++        margin-right 10px 
++        font-size 1.2em 
++    &:hover 
++        shadow-level(3)
++        // animation card 0.6s ease 1 forwards
++
++@keyframes card
++    0%
++        transform translate3d(0, 0, 0)
++    50%
++        transform translate3d(0, -135px, 0)
++    51%
++        z-index 10
++        transform translate3d(0, -135px, 0)
++    100%
++        z-index 10
++        transform translate3d(0, 0, 0)
++
++            
++.menu-item
++    @extend .recipe
++    
++.shopping-list
++    @extend .recipe
++    padding 50px 5%
++    list-style none
++    li
++        font-size 2em 
++        padding 20px
++        border-bottom 1px solid light-grey
++        border-top 1px solid light-grey
++        & + li 
++            border-top none
++
++.login-buttons-dropdown-align-
++    #login-dropdown-list
++        right 0
++        left auto 
++        a 
++            color dark-purp
+-- 
+2.2.1
+
+
+From 64eb19434424b33acb93b73ac1af310580bc2da2 Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Mon, 29 Feb 2016 02:49:51 -0800
+Subject: [PATCH 26/83] Step 11.2: Add a SideNav.html template to the partials
+ directory
+
+---
+ client/partials/SideNav.html | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+ create mode 100644 client/partials/SideNav.html
+
+diff --git a/client/partials/SideNav.html b/client/partials/SideNav.html
+new file mode 100644
+index 0000000..f5873b2
+--- /dev/null
++++ b/client/partials/SideNav.html
+@@ -0,0 +1,9 @@
++<template name="SideNav">
++	<nav class="side-nav">
++		<ul>
++			<li><a href="/recipe-book"><i class="fa fa-list"></i>Recipe Book</a></li>
++			<li><a href="/menu"><i class="fa fa-map-o"></i>Menu</a></li>
++			<li><a href="/shopping-list"><i class="fa fa-shopping-cart"></i>Shopping List</a></li>
++		</ul>
++	</nav>
++</template>
+\ No newline at end of file
+-- 
+2.2.1
+
+
+From 6a73a009df604dce8af801082159d7d85bd8bbad Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Mon, 29 Feb 2016 03:04:40 -0800
+Subject: [PATCH 27/83] Step 11.3: Include SideNav template in the MainLayout
+
+---
+ client/layouts/MainLayout.html | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/client/layouts/MainLayout.html b/client/layouts/MainLayout.html
+index a08d5c1..d657dc8 100644
+--- a/client/layouts/MainLayout.html
++++ b/client/layouts/MainLayout.html
+@@ -3,7 +3,8 @@
+  		<h1>My Recipe Book</h1>
+  		{{> loginButtons}}
+  	</header>
+- 	<main>
++ 	{{> SideNav}}
++ 	<main class="main-layout">
+ 		{{> Template.dynamic template=main}}
+  	</main>
+  </template>
+-- 
+2.2.1
+
+
+From 193368b5f72c4053f745a00e34623834ee198e4f Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Mon, 29 Feb 2016 03:06:45 -0800
+Subject: [PATCH 28/83] Step 11.4: Create a Header.html partial
+
+---
+ client/partials/Header.html | 6 ++++++
+ 1 file changed, 6 insertions(+)
+ create mode 100644 client/partials/Header.html
+
+diff --git a/client/partials/Header.html b/client/partials/Header.html
+new file mode 100644
+index 0000000..c318720
+--- /dev/null
++++ b/client/partials/Header.html
+@@ -0,0 +1,6 @@
++<template name="Header">
++	<header>
++		<h1>My Recipe Book</h1>
++		{{> loginButtons}}
++	</header>
++</template>
+\ No newline at end of file
+-- 
+2.2.1
+
+
+From eaa4cfee5150cbe711b980cc539dace710c75715 Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Mon, 29 Feb 2016 03:09:27 -0800
+Subject: [PATCH 29/83] Step 11.5: Include Header in the MainLayout
+
+---
+ client/layouts/MainLayout.html | 5 +----
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+
+diff --git a/client/layouts/MainLayout.html b/client/layouts/MainLayout.html
+index d657dc8..e5e9f6c 100644
+--- a/client/layouts/MainLayout.html
++++ b/client/layouts/MainLayout.html
+@@ -1,8 +1,5 @@
+  <template name="MainLayout">
+- 	<header>
+- 		<h1>My Recipe Book</h1>
+- 		{{> loginButtons}}
+- 	</header>
++ 	{{> Header}}
+  	{{> SideNav}}
+  	<main class="main-layout">
+ 		{{> Template.dynamic template=main}}
+-- 
+2.2.1
+
+
+From c9541e2f4c934c1a4c7ea673e23ff55b39d60cd7 Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Mon, 29 Feb 2016 03:10:13 -0800
+Subject: [PATCH 30/83] Step 11.6: Include Header in the HomeLayout
+
+---
+ client/layouts/HomeLayout.html | 5 +----
+ 1 file changed, 1 insertion(+), 4 deletions(-)
+
+diff --git a/client/layouts/HomeLayout.html b/client/layouts/HomeLayout.html
+index 226aab1..3a1bda9 100644
+--- a/client/layouts/HomeLayout.html
++++ b/client/layouts/HomeLayout.html
+@@ -1,8 +1,5 @@
+ <template name="HomeLayout">	
+-	<header>
+-		<h1>My Recipe Book</h1>
+-		{{> loginButtons}}
+-	</header>
++	{{> Header}}
+ 		<main>
+ 			<div class="billboard">
+ 				<h2>Organize your Meals</h2>
+-- 
+2.2.1
+
+
+From 64d10de4348521ec73412c32443ca5fc40ffd88b Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Mon, 29 Feb 2016 03:28:54 -0800
+Subject: [PATCH 31/83] Step 12.1: Add each loop for recipes
+
+---
+ client/recipes/Recipes.html | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+diff --git a/client/recipes/Recipes.html b/client/recipes/Recipes.html
+index 17d72da..6bf78da 100644
+--- a/client/recipes/Recipes.html
++++ b/client/recipes/Recipes.html
+@@ -1,3 +1,8 @@
+ <template name="Recipes">
+ 	{{> NewRecipe}}
++	<section class="recipes">
++			{{#each recipes}}
++				{{> Recipe}}
++			{{/each}}
++	</section>
+ </template>
+\ No newline at end of file
+-- 
+2.2.1
+
+
+From 28cad887c71351c47c2a669a1fad86710736e993 Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Mon, 29 Feb 2016 03:31:52 -0800
+Subject: [PATCH 32/83] Step 12.2: Add a template helper for recipes
+
+---
+ client/recipes.js | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+
+diff --git a/client/recipes.js b/client/recipes.js
+index f6a47b0..434c4dd 100644
+--- a/client/recipes.js
++++ b/client/recipes.js
+@@ -1 +1,7 @@
+-Meteor.subscribe('recipes');
+\ No newline at end of file
++Meteor.subscribe('recipes');
++
++Template.Recipes.helpers({
++	recipes: ()=> {
++		return Recipes.find({});
++	}
++});
+\ No newline at end of file
+-- 
+2.2.1
+
+
+From f0ecfa1a8518ee41da856277567524d78d8d6f5e Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Mon, 29 Feb 2016 03:41:47 -0800
+Subject: [PATCH 33/83] Step 12.3: Create a single recipe template
+
+---
+ client/recipes/Recipe.html | 11 +++++++++++
+ 1 file changed, 11 insertions(+)
+ create mode 100644 client/recipes/Recipe.html
+
+diff --git a/client/recipes/Recipe.html b/client/recipes/Recipe.html
+new file mode 100644
+index 0000000..ca8e664
+--- /dev/null
++++ b/client/recipes/Recipe.html
+@@ -0,0 +1,11 @@
++<template name="Recipe">
++	<article class="recipe">
++		<h3>{{name}}</h3>
++		<p>{{desc}}</p>
++			<p>
++				{{#each ingredients}}
++					<span class="ingredient">{{name}} - {{amount}}</span>
++				{{/each}} 
++			</p>
++	</article>
++</template>
+\ No newline at end of file
+-- 
+2.2.1
+
+
+From 30d95f8a95b618cd35cb8b000d1be12609d71ed7 Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Mon, 29 Feb 2016 04:11:15 -0800
+Subject: [PATCH 34/83] Step 13.1: Create template level subscription
+
+---
+ client/recipes.js | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+
+diff --git a/client/recipes.js b/client/recipes.js
+index 434c4dd..f0e3f68 100644
+--- a/client/recipes.js
++++ b/client/recipes.js
+@@ -1,4 +1,9 @@
+-Meteor.subscribe('recipes');
++Template.Recipes.onCreated(function(){
++	var self = this;
++	self.autorun(function() {
++		self.subscribe('recipes');
++	});
++});
+ 
+ Template.Recipes.helpers({
+ 	recipes: ()=> {
+-- 
+2.2.1
+
+
+From 1209cc9a239a02e7b7303e3d011e65fda306dbf8 Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Mon, 29 Feb 2016 04:17:58 -0800
+Subject: [PATCH 35/83] Step 13.2: Automatically track the status of your
+ subscription data
+
+---
+ client/recipes/Recipes.html | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/client/recipes/Recipes.html b/client/recipes/Recipes.html
+index 6bf78da..95889e5 100644
+--- a/client/recipes/Recipes.html
++++ b/client/recipes/Recipes.html
+@@ -1,8 +1,12 @@
+ <template name="Recipes">
+ 	{{> NewRecipe}}
+ 	<section class="recipes">
++		{{#if Template.subscriptionsReady}}
+ 			{{#each recipes}}
+ 				{{> Recipe}}
+ 			{{/each}}
++		{{else}}
++			<p>Loading</p>
++		{{/if}}
+ 	</section>
+ </template>
+\ No newline at end of file
+-- 
+2.2.1
+
+
+From 1203c3055da5ce2f881b1403069f875a783dda7c Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Mon, 29 Feb 2016 04:35:49 -0800
+Subject: [PATCH 36/83] Step 14.1: Create a 'view details' link
+
+---
+ client/recipes/Recipe.html | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/client/recipes/Recipe.html b/client/recipes/Recipe.html
+index ca8e664..239bc2a 100644
+--- a/client/recipes/Recipe.html
++++ b/client/recipes/Recipe.html
+@@ -7,5 +7,6 @@
+ 					<span class="ingredient">{{name}} - {{amount}}</span>
+ 				{{/each}} 
+ 			</p>
++			<a href="/recipe/{{_id}}">View Details</a>
+ 	</article>
+ </template>
+\ No newline at end of file
+-- 
+2.2.1
+
+
+From 25159492fb16b7bd5c427a035375cc73c4df2053 Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Mon, 29 Feb 2016 04:38:26 -0800
+Subject: [PATCH 37/83] Step 14.2: Add a route with an :id parameter
+
+---
+ lib/routes.js | 8 ++++++++
+ 1 file changed, 8 insertions(+)
+
+diff --git a/lib/routes.js b/lib/routes.js
+index 582d785..c9505f8 100644
+--- a/lib/routes.js
++++ b/lib/routes.js
+@@ -12,4 +12,12 @@ FlowRouter.route('/recipe-book', {
+ 		GAnalytics.pageview();
+ 		BlazeLayout.render('MainLayout', {main: 'Recipes'});
+ 	}
++});
++
++FlowRouter.route('/recipe/:id', {
++	name: 'recipe',
++	action() {
++		GAnalytics.pageview();
++		BlazeLayout.render('MainLayout', {main: 'RecipeSingle'});
++	}
+ });
+\ No newline at end of file
+-- 
+2.2.1
+
+
+From 8d963b80624451c1dd2929a6f88cd771ffefa20d Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Mon, 29 Feb 2016 04:40:03 -0800
+Subject: [PATCH 38/83] Step 14.3: Create a new template for an individual
+ recipe
+
+---
+ client/recipes/RecipeSingle.html | 3 +++
+ 1 file changed, 3 insertions(+)
+ create mode 100644 client/recipes/RecipeSingle.html
+
+diff --git a/client/recipes/RecipeSingle.html b/client/recipes/RecipeSingle.html
+new file mode 100644
+index 0000000..89966aa
+--- /dev/null
++++ b/client/recipes/RecipeSingle.html
+@@ -0,0 +1,3 @@
++<template name="RecipeSingle">
++	<h1>{{recipe.name}}</h1>
++</template>
+\ No newline at end of file
+-- 
+2.2.1
+
+
+From 8a53961ca7e54e9ba366990b9eddec7311440422 Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Mon, 29 Feb 2016 04:49:44 -0800
+Subject: [PATCH 39/83] Step 14.4: Add helpers to the single recipe template
+
+---
+ client/recipes/RecipeSingle.js | 13 +++++++++++++
+ 1 file changed, 13 insertions(+)
+ create mode 100644 client/recipes/RecipeSingle.js
+
+diff --git a/client/recipes/RecipeSingle.js b/client/recipes/RecipeSingle.js
+new file mode 100644
+index 0000000..b7e119c
+--- /dev/null
++++ b/client/recipes/RecipeSingle.js
+@@ -0,0 +1,13 @@
++Template.RecipeSingle.onCreated(function(){
++	var self = this;
++	self.autorun(function() {
++		self.subscribe('recipes');
++	});
++});
++
++Template.RecipeSingle.helpers({
++	recipe: ()=> {
++		var id = FlowRouter.getParam('id');
++		return Recipes.findOne({_id: id});
++	}
++});
+\ No newline at end of file
+-- 
+2.2.1
+
+
+From 721b40b5db6273c1272843de218fce0bc176fa3c Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Tue, 1 Mar 2016 10:21:10 -0800
+Subject: [PATCH 40/83] Step 15.1: Create a publication for a single recipe
+
+---
+ server/publish.js | 5 +++++
+ 1 file changed, 5 insertions(+)
+
+diff --git a/server/publish.js b/server/publish.js
+index 088329c..7c029c8 100644
+--- a/server/publish.js
++++ b/server/publish.js
+@@ -1,3 +1,8 @@
+ Meteor.publish('recipes', function(){
+ 	return Recipes.find({author: this.userId});
++});
++
++Meteor.publish('SingleRecipe', function(id){
++	check(id, String);
++	return Recipes.find({_id: id});
+ });
+\ No newline at end of file
+-- 
+2.2.1
+
+
+From 8e4e392ebe86cfd93d1f59d766c75294554d61a5 Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Tue, 1 Mar 2016 10:29:28 -0800
+Subject: [PATCH 41/83] Step 15.2: Add the check package
+
+---
+ .meteor/packages | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/.meteor/packages b/.meteor/packages
+index 57dd5db..be838ba 100644
+--- a/.meteor/packages
++++ b/.meteor/packages
+@@ -32,4 +32,6 @@ matb33:bootstrap-glyphicons
+ zimme:active-route
+ gwendall:auth-client-callbacks
+ meteortoys:allthings
+-datariot:ganalytics
+\ No newline at end of file
++datariot:ganalytics
++
++check
+\ No newline at end of file
+-- 
+2.2.1
+
+
+From deab00b1549c81fd02bf61bc2bf2bb3624a3aeba Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Tue, 1 Mar 2016 10:40:56 -0800
+Subject: [PATCH 42/83] Step 15.3: Subscribe to the single recipe publication
+
+---
+ client/recipes/RecipeSingle.js | 3 ++-
+ 1 file changed, 2 insertions(+), 1 deletion(-)
+
+diff --git a/client/recipes/RecipeSingle.js b/client/recipes/RecipeSingle.js
+index b7e119c..878e4fd 100644
+--- a/client/recipes/RecipeSingle.js
++++ b/client/recipes/RecipeSingle.js
+@@ -1,7 +1,8 @@
+ Template.RecipeSingle.onCreated(function(){
+ 	var self = this;
+ 	self.autorun(function() {
+-		self.subscribe('recipes');
++		var id = FlowRouter.getParam('id');
++		self.subscribe('SingleRecipe', id);
+ 	});
+ });
+ 
+-- 
+2.2.1
+
+
+From 153bce708e5862e4173905a4596b3cbb4a376b88 Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Tue, 1 Mar 2016 11:13:38 -0800
+Subject: [PATCH 43/83] Step 16.1: Automatically redirect logged in users to
+ the recipe book
+
+---
+ lib/routes.js | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/lib/routes.js b/lib/routes.js
+index c9505f8..7d1f1f3 100644
+--- a/lib/routes.js
++++ b/lib/routes.js
+@@ -9,6 +9,9 @@ FlowRouter.route('/', {
+ FlowRouter.route('/recipe-book', {
+ 	name: 'recipe-book',
+ 	action() {
++		if(Meteor.userId()){
++			FlowRouter.go('recipe-book');
++		}
+ 		GAnalytics.pageview();
+ 		BlazeLayout.render('MainLayout', {main: 'Recipes'});
+ 	}
+-- 
+2.2.1
+
+
+From c1d54fb882e1f438a33c53ee938a9102fc68709d Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Tue, 1 Mar 2016 11:17:41 -0800
+Subject: [PATCH 44/83] Step 16.2: Redirect non-logged in users to the home
+ page
+
+---
+ lib/routes.js | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/lib/routes.js b/lib/routes.js
+index 7d1f1f3..fc54fe5 100644
+--- a/lib/routes.js
++++ b/lib/routes.js
+@@ -1,3 +1,9 @@
++FlowRouter.triggers.enter([function(context, redirect){
++	if(!Meteor.userId()) {
++		FlowRouter.go('home');
++	}
++}]);
++
+ FlowRouter.route('/', {
+ 	name: 'home',
+ 	action() {
+-- 
+2.2.1
+
+
+From 457ef757be911bd82b3260c73e10d8d1c7ab3207 Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Tue, 1 Mar 2016 11:35:01 -0800
+Subject: [PATCH 45/83] Step 17.1: Add login and logout redirecting
+
+---
+ lib/routes.js | 9 +++++++++
+ 1 file changed, 9 insertions(+)
+
+diff --git a/lib/routes.js b/lib/routes.js
+index fc54fe5..93b81ad 100644
+--- a/lib/routes.js
++++ b/lib/routes.js
+@@ -1,3 +1,12 @@
++if(Meteor.isClient){
++	Accounts.onLogin(function(){
++		FlowRouter.go('recipe-book');
++	});
++
++	Accounts.onLogout(function(){
++		FlowRouter.go('home');
++	});
++}
+ FlowRouter.triggers.enter([function(context, redirect){
+ 	if(!Meteor.userId()) {
+ 		FlowRouter.go('home');
+-- 
+2.2.1
+
+
+From 48ee3d4477016910b2d5bc1087221e3d7c99d217 Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Tue, 1 Mar 2016 12:05:36 -0800
+Subject: [PATCH 46/83] Step 18.1: Add toggle buttons to each recipe
+
+---
+ client/recipes/Recipe.html | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/client/recipes/Recipe.html b/client/recipes/Recipe.html
+index 239bc2a..394f61f 100644
+--- a/client/recipes/Recipe.html
++++ b/client/recipes/Recipe.html
+@@ -8,5 +8,7 @@
+ 				{{/each}} 
+ 			</p>
+ 			<a href="/recipe/{{_id}}">View Details</a>
++			<button class="btn-deny toggle-menu">Remove from Menu</button>
++			<button class="btn-primary toggle-menu">Add to Menu</button>
+ 	</article>
+ </template>
+\ No newline at end of file
+-- 
+2.2.1
+
+
+From 1f22920a532268ff9c910870275307d2265eb1ce Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Tue, 1 Mar 2016 12:25:46 -0800
+Subject: [PATCH 47/83] Step 18.2: Test a click event on the toggle buttons
+
+---
+ client/recipes/recipe.js | 5 +++++
+ 1 file changed, 5 insertions(+)
+ create mode 100644 client/recipes/recipe.js
+
+diff --git a/client/recipes/recipe.js b/client/recipes/recipe.js
+new file mode 100644
+index 0000000..7dc97a7
+--- /dev/null
++++ b/client/recipes/recipe.js
+@@ -0,0 +1,5 @@
++Template.Recipe.events({
++	'click .toggle-menu': function(){
++		console.log('click');
++	}
++});
+\ No newline at end of file
+-- 
+2.2.1
+
+
+From 8173911473516b2739afda1463ae8bf7439b8967 Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Tue, 1 Mar 2016 12:48:26 -0800
+Subject: [PATCH 48/83] Step 18.3: Create an allow rule to enable a user to
+ update database records
+
+---
+ collections/recipes.js | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/collections/recipes.js b/collections/recipes.js
+index f4cb3c7..d9756c2 100644
+--- a/collections/recipes.js
++++ b/collections/recipes.js
+@@ -3,6 +3,9 @@ Recipes = new Mongo.Collection('recipes');
+ Recipes.allow({
+ 	insert: function(userId, doc) {
+ 		return !!userId;
++	},
++	update: function(userId, doc) {
++		return !!userId;
+ 	}
+ });
+ 
+-- 
+2.2.1
+
+
+From 9f792b7c7c987c25a185c3c494e677884da3b384 Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Tue, 1 Mar 2016 12:49:57 -0800
+Subject: [PATCH 49/83] Step 18.4: Add a method to update the inMenu value
+
+---
+ collections/recipes.js | 10 ++++++++++
+ 1 file changed, 10 insertions(+)
+
+diff --git a/collections/recipes.js b/collections/recipes.js
+index d9756c2..2af0b62 100644
+--- a/collections/recipes.js
++++ b/collections/recipes.js
+@@ -60,4 +60,14 @@ RecipeSchema = new SimpleSchema({
+ 	}
+ });
+ 
++Meteor.methods({
++	toggleMenuItem: function(id, currentState){
++		Recipes.update(id, {
++			$set: {
++				inMenu: !currentState
++			}
++		});
++	}
++});
++
+ Recipes.attachSchema(RecipeSchema);
+\ No newline at end of file
+-- 
+2.2.1
+
+
+From 141f6d5745fcaea5e058790680f095dcedb0d6ef Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Tue, 1 Mar 2016 13:09:26 -0800
+Subject: [PATCH 50/83] Step 18.5: Call the toggleMenuItem method in the click
+ event
+
+---
+ client/recipes/recipe.js | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/client/recipes/recipe.js b/client/recipes/recipe.js
+index 7dc97a7..2c9b00f 100644
+--- a/client/recipes/recipe.js
++++ b/client/recipes/recipe.js
+@@ -1,5 +1,5 @@
+ Template.Recipe.events({
+ 	'click .toggle-menu': function(){
+-		console.log('click');
++		Meteor.call('toggleMenuItem', this._id, this.inMenu);
+ 	}
+ });
+\ No newline at end of file
+-- 
+2.2.1
+
+
+From eea34dd41b0bf838fb8db532005eb32ce5893111 Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Tue, 1 Mar 2016 14:00:06 -0800
+Subject: [PATCH 51/83] Step 19.1: Create a conditional class for recipes
+
+---
+ client/recipes/Recipe.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/client/recipes/Recipe.html b/client/recipes/Recipe.html
+index 394f61f..ee3caeb 100644
+--- a/client/recipes/Recipe.html
++++ b/client/recipes/Recipe.html
+@@ -1,5 +1,5 @@
+ <template name="Recipe">
+-	<article class="recipe">
++	<article class="recipe {{#if inMenu}}in-menu{{/if}}">
+ 		<h3>{{name}}</h3>
+ 		<p>{{desc}}</p>
+ 			<p>
+-- 
+2.2.1
+
+
+From 7e3a0fa1bcefc2b71ac3ece610966453c0c8ecdc Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Tue, 1 Mar 2016 14:17:11 -0800
+Subject: [PATCH 52/83] Step 19.2: Update the in-menu styles
+
+---
+ styles.styl | 8 +++++---
+ 1 file changed, 5 insertions(+), 3 deletions(-)
+
+diff --git a/styles.styl b/styles.styl
+index 38eb553..89edc30 100644
+--- a/styles.styl
++++ b/styles.styl
+@@ -314,16 +314,18 @@ input, select, textarea
+     z-index 1
+     shadow-level(1)
+     trans()
+-    .remove-from-menu
++    .btn-primary
++        display block
++    .btn-deny
+         display none
+     &.in-menu
+         background teal
+         color #FFF
+         h3
+             border-bottom: rgba(255,255,255, 0.6) solid 3px
+-        .add-to-menu
++        .btn-primary
+             display none
+-        .remove-from-menu  
++        .btn-deny  
+             display block
+     h3
+         font-size: 3em;
+-- 
+2.2.1
+
+
+From 1a285b39a9511f41968c286dfeb9c9f7d690b110 Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Tue, 1 Mar 2016 14:19:32 -0800
+Subject: [PATCH 53/83] Step 19.3: Create a route for the menu
+
+---
+ lib/routes.js | 7 +++++++
+ 1 file changed, 7 insertions(+)
+
+diff --git a/lib/routes.js b/lib/routes.js
+index 93b81ad..af46539 100644
+--- a/lib/routes.js
++++ b/lib/routes.js
+@@ -38,4 +38,11 @@ FlowRouter.route('/recipe/:id', {
+ 		GAnalytics.pageview();
+ 		BlazeLayout.render('MainLayout', {main: 'RecipeSingle'});
+ 	}
++});
++
++FlowRouter.route('/menu', {
++	name: 'menu',
++	action() {
++		BlazeLayout.render('MainLayout', {main: 'Menu'});
++	}
+ });
+\ No newline at end of file
+-- 
+2.2.1
+
+
+From c4d43c52c4313828bc29b61a886842facecaf8ca Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Tue, 1 Mar 2016 14:31:04 -0800
+Subject: [PATCH 54/83] Step 19.4: Create a template for the menu page
+
+---
+ client/Menu.html | 7 +++++++
+ 1 file changed, 7 insertions(+)
+ create mode 100644 client/Menu.html
+
+diff --git a/client/Menu.html b/client/Menu.html
+new file mode 100644
+index 0000000..fa91362
+--- /dev/null
++++ b/client/Menu.html
+@@ -0,0 +1,7 @@
++<template name="Menu">
++	<h1 class="page-title">My Current Menu</h1>
++	{{#each recipes}}
++		<h3>{{name}}</h3>
++		<p>{{desc}}</p>
++	{{/each}}
++</template>
+\ No newline at end of file
+-- 
+2.2.1
+
+
+From 1dbd9a498d09a922533e8e471b2f28db85a5d44c Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Tue, 1 Mar 2016 14:33:26 -0800
+Subject: [PATCH 55/83] Step 19.5: Add a helper to only find recipes inMenu
+
+---
+ client/recipes/menu.js | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+ create mode 100644 client/recipes/menu.js
+
+diff --git a/client/recipes/menu.js b/client/recipes/menu.js
+new file mode 100644
+index 0000000..194214a
+--- /dev/null
++++ b/client/recipes/menu.js
+@@ -0,0 +1,12 @@
++Template.Menu.onCreated(function(){
++	var self = this;
++	self.autorun(function (){
++		self.subscribe('recipes');
++	});
++});
++
++Template.Menu.helpers({
++	recipes: ()=> {
++		return Recipes.find({inMenu: true});
++	}
++});
+\ No newline at end of file
+-- 
+2.2.1
+
+
+From b3053b535ef54930a25b6eaf11ea19e4e53f9ad1 Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Tue, 1 Mar 2016 14:53:32 -0800
+Subject: [PATCH 56/83] Step 20.1: Create a template for menu items
+
+---
+ client/Menu.html | 8 +++++++-
+ 1 file changed, 7 insertions(+), 1 deletion(-)
+
+diff --git a/client/Menu.html b/client/Menu.html
+index fa91362..0ce9f86 100644
+--- a/client/Menu.html
++++ b/client/Menu.html
+@@ -1,7 +1,13 @@
+ <template name="Menu">
+ 	<h1 class="page-title">My Current Menu</h1>
+ 	{{#each recipes}}
++		{{> MenuItem}}
++	{{/each}}
++</template>
++
++<template name="MenuItem">
++	<div class="menu-item">
+ 		<h3>{{name}}</h3>
+ 		<p>{{desc}}</p>
+-	{{/each}}
++	</div>
+ </template>
+\ No newline at end of file
+-- 
+2.2.1
+
+
+From 657a1a8dcedd67328ee7481d1defc805ade60e40 Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Tue, 1 Mar 2016 14:55:44 -0800
+Subject: [PATCH 57/83] Step 20.2: Show alternative text if there are no menu
+ items
+
+---
+ client/Menu.html | 2 ++
+ 1 file changed, 2 insertions(+)
+
+diff --git a/client/Menu.html b/client/Menu.html
+index 0ce9f86..c26a72e 100644
+--- a/client/Menu.html
++++ b/client/Menu.html
+@@ -2,6 +2,8 @@
+ 	<h1 class="page-title">My Current Menu</h1>
+ 	{{#each recipes}}
+ 		{{> MenuItem}}
++	{{else}}
++		<h2>Please add <a href="/recipe-book">recipes</a> to your menu.</h2>
+ 	{{/each}}
+ </template>
+ 
+-- 
+2.2.1
+
+
+From 43f518ad7d30e43ce44796ddcf50b91fe276b78b Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Tue, 1 Mar 2016 15:33:23 -0800
+Subject: [PATCH 58/83] Step 20.3: Update the css
+
+---
+ styles.styl | 8 +-------
+ 1 file changed, 1 insertion(+), 7 deletions(-)
+
+diff --git a/styles.styl b/styles.styl
+index 89edc30..b8a2105 100644
+--- a/styles.styl
++++ b/styles.styl
+@@ -314,19 +314,13 @@ input, select, textarea
+     z-index 1
+     shadow-level(1)
+     trans()
+-    .btn-primary
++    .btn-primary, .btn-deny
+         display block
+-    .btn-deny
+-        display none
+     &.in-menu
+         background teal
+         color #FFF
+         h3
+             border-bottom: rgba(255,255,255, 0.6) solid 3px
+-        .btn-primary
+-            display none
+-        .btn-deny  
+-            display block
+     h3
+         font-size: 3em;
+         opacity: 0.3;
+-- 
+2.2.1
+
+
+From a99dc1390820b638e6bb2224de2dcc3d2e645216 Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Tue, 1 Mar 2016 15:37:26 -0800
+Subject: [PATCH 59/83] Step 20.4: Show buttons with if:else helper
+
+---
+ client/recipes/Recipe.html | 7 +++++--
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+
+diff --git a/client/recipes/Recipe.html b/client/recipes/Recipe.html
+index ee3caeb..60bc67c 100644
+--- a/client/recipes/Recipe.html
++++ b/client/recipes/Recipe.html
+@@ -8,7 +8,10 @@
+ 				{{/each}} 
+ 			</p>
+ 			<a href="/recipe/{{_id}}">View Details</a>
+-			<button class="btn-deny toggle-menu">Remove from Menu</button>
+-			<button class="btn-primary toggle-menu">Add to Menu</button>
++			{{#if inMenu}}
++				<button class="btn-deny toggle-menu">Remove from Menu</button>
++			{{else}}
++			 	<button class="btn-primary toggle-menu">Add to Menu</button>
++			{{/if}}
+ 	</article>
+ </template>
+\ No newline at end of file
+-- 
+2.2.1
+
+
+From 1f32e4c59d77b63b22ea34313cbfb764551ec01b Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Tue, 1 Mar 2016 15:51:27 -0800
+Subject: [PATCH 60/83] Step 21.1: Create a template for the Shopping List page
+
+---
+ client/ShoppingList.html | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+ create mode 100644 client/ShoppingList.html
+
+diff --git a/client/ShoppingList.html b/client/ShoppingList.html
+new file mode 100644
+index 0000000..e309eef
+--- /dev/null
++++ b/client/ShoppingList.html
+@@ -0,0 +1,12 @@
++<template name="ShoppingList">
++	<h1 class="page-title">My Shopping List</h1>
++	<ul class="shopping-list">
++		{{#each shoppingList}}
++			{{#each ingredients}}
++				<li>{{name}} - <span class="amount">{{amount}}</span></li>
++			{{/each}}
++		{{else}}
++			<li>Uh, oh. Please add <a href="/recipe-book">recipes</a> to your menu.</li>
++		{{/each}}
++	</ul>
++</template>
+\ No newline at end of file
+-- 
+2.2.1
+
+
+From 71edc72385a922506827afab0a5ff58ae5664ee0 Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Tue, 1 Mar 2016 15:54:03 -0800
+Subject: [PATCH 61/83] Step 21.2:Create a route for the Shopping List page
+
+---
+ lib/routes.js | 7 +++++++
+ 1 file changed, 7 insertions(+)
+
+diff --git a/lib/routes.js b/lib/routes.js
+index af46539..03945b9 100644
+--- a/lib/routes.js
++++ b/lib/routes.js
+@@ -45,4 +45,11 @@ FlowRouter.route('/menu', {
+ 	action() {
+ 		BlazeLayout.render('MainLayout', {main: 'Menu'});
+ 	}
++});
++
++FlowRouter.route('/shopping-list', {
++	name: 'shopping-list',
++	action() {
++		BlazeLayout.render('MainLayout', {main: 'ShoppingList'});
++	}
+ });
+\ No newline at end of file
+-- 
+2.2.1
+
+
+From 9ac78707245e8fdec114328c9f448c4bb5473385 Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Tue, 1 Mar 2016 16:00:57 -0800
+Subject: [PATCH 62/83] Step 21.3: Create a subscribe and helper for our
+ Shopping List
+
+---
+ client/ShoppingList.js | 12 ++++++++++++
+ 1 file changed, 12 insertions(+)
+ create mode 100644 client/ShoppingList.js
+
+diff --git a/client/ShoppingList.js b/client/ShoppingList.js
+new file mode 100644
+index 0000000..3e13ac1
+--- /dev/null
++++ b/client/ShoppingList.js
+@@ -0,0 +1,12 @@
++Template.ShoppingList.onCreated(function(){
++	var self = this;
++	self.autorun(function (){
++		self.subscribe('recipes');
++	});
++});
++
++Template.ShoppingList.helpers({
++	shoppingList: ()=> {
++		return Recipes.find({inMenu: true});
++	}
++});
+\ No newline at end of file
+-- 
+2.2.1
+
+
+From 6a3721f6fc93b4cb6dede5e1858a864493ed8943 Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Tue, 1 Mar 2016 16:52:53 -0800
+Subject: [PATCH 63/83] Step 22.1: Add a quickForm to update a recipe
+
+---
+ client/recipes/Recipe.html | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/client/recipes/Recipe.html b/client/recipes/Recipe.html
+index 60bc67c..65a4d38 100644
+--- a/client/recipes/Recipe.html
++++ b/client/recipes/Recipe.html
+@@ -13,5 +13,6 @@
+ 			{{else}}
+ 			 	<button class="btn-primary toggle-menu">Add to Menu</button>
+ 			{{/if}}
++			{{> quickForm collection="Recipes" id=updateRecipeId type="update" doc=this}}
+ 	</article>
+ </template>
+\ No newline at end of file
+-- 
+2.2.1
+
+
+From b93e9a10c9bdbfe665a5f86bff00164e678f45fc Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Tue, 1 Mar 2016 16:55:49 -0800
+Subject: [PATCH 64/83] Step 22.2: Add a helper for updateRecipeId
+
+---
+ client/recipes/recipe.js | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/client/recipes/recipe.js b/client/recipes/recipe.js
+index 2c9b00f..6ed3dd7 100644
+--- a/client/recipes/recipe.js
++++ b/client/recipes/recipe.js
+@@ -1,3 +1,9 @@
++Template.Recipe.helpers({
++	updateRecipeId: function() {
++		return this._id;
++	}
++});
++
+ Template.Recipe.events({
+ 	'click .toggle-menu': function(){
+ 		Meteor.call('toggleMenuItem', this._id, this.inMenu);
+-- 
+2.2.1
+
+
+From 6c6dca9b92dd6f1e71a0876d59b80858ff00a995 Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Tue, 1 Mar 2016 16:58:00 -0800
+Subject: [PATCH 65/83] Update the form with autosave
+
+---
+ client/recipes/Recipe.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/client/recipes/Recipe.html b/client/recipes/Recipe.html
+index 65a4d38..9fe9e00 100644
+--- a/client/recipes/Recipe.html
++++ b/client/recipes/Recipe.html
+@@ -13,6 +13,6 @@
+ 			{{else}}
+ 			 	<button class="btn-primary toggle-menu">Add to Menu</button>
+ 			{{/if}}
+-			{{> quickForm collection="Recipes" id=updateRecipeId type="update" doc=this}}
++			{{> quickForm collection="Recipes" id=updateRecipeId type="update" doc=this autosave=true}}
+ 	</article>
+ </template>
+\ No newline at end of file
+-- 
+2.2.1
+
+
+From 31d7618f855ae6e1696f42189859d4c7ca137772 Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Tue, 1 Mar 2016 21:35:41 -0800
+Subject: [PATCH 66/83] Step 23.1: Add a trash icon to the Recipe listing
+
+---
+ client/recipes/Recipe.html | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/client/recipes/Recipe.html b/client/recipes/Recipe.html
+index 9fe9e00..227157e 100644
+--- a/client/recipes/Recipe.html
++++ b/client/recipes/Recipe.html
+@@ -8,6 +8,7 @@
+ 				{{/each}} 
+ 			</p>
+ 			<a href="/recipe/{{_id}}">View Details</a>
++			<i class="fa fa-trash"></i>
+ 			{{#if inMenu}}
+ 				<button class="btn-deny toggle-menu">Remove from Menu</button>
+ 			{{else}}
+-- 
+2.2.1
+
+
+From 0a06332dc970a0a3a6ccb3d1aafe5f9b6bee65ed Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Tue, 1 Mar 2016 21:40:08 -0800
+Subject: [PATCH 67/83] Step 23.2: Create a method to delete a recipe
+
+---
+ collections/recipes.js | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/collections/recipes.js b/collections/recipes.js
+index 2af0b62..9d9cc31 100644
+--- a/collections/recipes.js
++++ b/collections/recipes.js
+@@ -67,6 +67,9 @@ Meteor.methods({
+ 				inMenu: !currentState
+ 			}
+ 		});
++	},
++	deleteRecipe: function(id){
++		Recipes.remove(id);
+ 	}
+ });
+ 
+-- 
+2.2.1
+
+
+From 29a4e1a94a359e870f0b24dc1f3cba3be41422c3 Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Tue, 1 Mar 2016 21:43:03 -0800
+Subject: [PATCH 68/83] Step 23.3: Call the delete method when a user clicks
+ the trash icon
+
+---
+ client/recipes/recipe.js | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/client/recipes/recipe.js b/client/recipes/recipe.js
+index 6ed3dd7..34706a3 100644
+--- a/client/recipes/recipe.js
++++ b/client/recipes/recipe.js
+@@ -7,5 +7,8 @@ Template.Recipe.helpers({
+ Template.Recipe.events({
+ 	'click .toggle-menu': function(){
+ 		Meteor.call('toggleMenuItem', this._id, this.inMenu);
++	},
++	'click .fa-trash': function () {
++		Meteor.call('deleteRecipe', this._id);
+ 	}
+ });
+\ No newline at end of file
+-- 
+2.2.1
+
+
+From 8a74acd0b03f6a11d5299bc7636f3be4d3c7b677 Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Tue, 1 Mar 2016 21:50:09 -0800
+Subject: [PATCH 69/83] Step 23.4: Add a pencil icon for editing a recipe
+
+---
+ client/recipes/Recipe.html | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/client/recipes/Recipe.html b/client/recipes/Recipe.html
+index 227157e..09fee4d 100644
+--- a/client/recipes/Recipe.html
++++ b/client/recipes/Recipe.html
+@@ -9,6 +9,7 @@
+ 			</p>
+ 			<a href="/recipe/{{_id}}">View Details</a>
+ 			<i class="fa fa-trash"></i>
++			<i class="fa fa-pencil"></i>
+ 			{{#if inMenu}}
+ 				<button class="btn-deny toggle-menu">Remove from Menu</button>
+ 			{{else}}
+-- 
+2.2.1
+
+
+From 7d52d18f18aa812f50f8fbcdc2a19b468e5defcb Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Tue, 1 Mar 2016 21:56:43 -0800
+Subject: [PATCH 70/83] Step 23.5: Style the pencil icon
+
+---
+ styles.styl | 6 +++++-
+ 1 file changed, 5 insertions(+), 1 deletion(-)
+
+diff --git a/styles.styl b/styles.styl
+index b8a2105..fc769f7 100644
+--- a/styles.styl
++++ b/styles.styl
+@@ -329,7 +329,7 @@ input, select, textarea
+         margin-bottom 10px 
+     button
+         margin-top 20px 
+-    .fa-trash
++    .fa-trash, .fa-pencil
+         opacity 0.3
+         cursor pointer
+         position absolute
+@@ -343,6 +343,10 @@ input, select, textarea
+         &:hover
+             color red 
+             opacity 0.6
++    .fa-pencil
++        right 40px
++        &:hover
++            color purple
+     .ingredient
+         display inline-block
+         margin-right 10px 
+-- 
+2.2.1
+
+
+From b558af99b71496c0bf465fbfab40249ce5dbb5a9 Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Tue, 1 Mar 2016 22:11:32 -0800
+Subject: [PATCH 71/83] Step 23.6: Add a custom session variable using a
+ template helper
+
+---
+ client/recipes/Recipe.html | 4 +++-
+ 1 file changed, 3 insertions(+), 1 deletion(-)
+
+diff --git a/client/recipes/Recipe.html b/client/recipes/Recipe.html
+index 09fee4d..d6d93c1 100644
+--- a/client/recipes/Recipe.html
++++ b/client/recipes/Recipe.html
+@@ -15,6 +15,8 @@
+ 			{{else}}
+ 			 	<button class="btn-primary toggle-menu">Add to Menu</button>
+ 			{{/if}}
+-			{{> quickForm collection="Recipes" id=updateRecipeId type="update" doc=this autosave=true}}
++			{{#if $.Session.get 'editMode'}}
++				{{> quickForm collection="Recipes" id=updateRecipeId type="update" doc=this autosave=true}}
++			{{/if}}
+ 	</article>
+ </template>
+\ No newline at end of file
+-- 
+2.2.1
+
+
+From 84a937a599fa98939ce0e503032b169f09ced419 Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Tue, 1 Mar 2016 22:16:54 -0800
+Subject: [PATCH 72/83] Step 23.7: Add a click event to the pencil to toggle
+ the update form
+
+---
+ client/recipes/recipe.js | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/client/recipes/recipe.js b/client/recipes/recipe.js
+index 34706a3..3d8afbc 100644
+--- a/client/recipes/recipe.js
++++ b/client/recipes/recipe.js
+@@ -10,5 +10,8 @@ Template.Recipe.events({
+ 	},
+ 	'click .fa-trash': function () {
+ 		Meteor.call('deleteRecipe', this._id);
++	},
++	'click .fa-pencil': function () {
++		Session.set('editMode', !Session.get('editMode'));
+ 	}
+ });
+\ No newline at end of file
+-- 
+2.2.1
+
+
+From f7fc7be201e48874882d41b903986df7f45063c6 Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Tue, 1 Mar 2016 22:33:29 -0800
+Subject: [PATCH 73/83] Step 23.8: Hide the recipe details while in editMode
+
+---
+ client/recipes/Recipe.html | 13 +++++++------
+ 1 file changed, 7 insertions(+), 6 deletions(-)
+
+diff --git a/client/recipes/Recipe.html b/client/recipes/Recipe.html
+index d6d93c1..9fbeee8 100644
+--- a/client/recipes/Recipe.html
++++ b/client/recipes/Recipe.html
+@@ -1,22 +1,23 @@
+ <template name="Recipe">
+ 	<article class="recipe {{#if inMenu}}in-menu{{/if}}">
+ 		<h3>{{name}}</h3>
+-		<p>{{desc}}</p>
++		{{#if $.Session.get 'editMode'}}
++			{{> quickForm collection="Recipes" id=updateRecipeId type="update" doc=this autosave=true}}
++		{{else}}
++			<p>{{desc}}</p>
+ 			<p>
+ 				{{#each ingredients}}
+ 					<span class="ingredient">{{name}} - {{amount}}</span>
+ 				{{/each}} 
+ 			</p>
+ 			<a href="/recipe/{{_id}}">View Details</a>
+-			<i class="fa fa-trash"></i>
+-			<i class="fa fa-pencil"></i>
+ 			{{#if inMenu}}
+ 				<button class="btn-deny toggle-menu">Remove from Menu</button>
+ 			{{else}}
+ 			 	<button class="btn-primary toggle-menu">Add to Menu</button>
+ 			{{/if}}
+-			{{#if $.Session.get 'editMode'}}
+-				{{> quickForm collection="Recipes" id=updateRecipeId type="update" doc=this autosave=true}}
+-			{{/if}}
++		{{/if}}
++			<i class="fa fa-trash"></i>
++			<i class="fa fa-pencil"></i>
+ 	</article>
+ </template>
+\ No newline at end of file
+-- 
+2.2.1
+
+
+From 4bc35dda13203d63924300a30544168b7a0511ed Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Tue, 1 Mar 2016 22:37:00 -0800
+Subject: [PATCH 74/83] Step 24.1: Add the reactive-var package
+
+---
+ .meteor/packages | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/.meteor/packages b/.meteor/packages
+index be838ba..01f4058 100644
+--- a/.meteor/packages
++++ b/.meteor/packages
+@@ -11,6 +11,7 @@ blaze-html-templates    # Compile .html files into Meteor Blaze views
+ session                 # Client-side reactive dictionary for your app
+ jquery                  # Helpful client-side library
+ tracker                 # Meteor's client-side reactive programming library
++reactive-var
+ 
+ standard-minifiers      # JS/CSS minifiers run for production mode
+ es5-shim                # ECMAScript 5 compatibility for older browsers.
+-- 
+2.2.1
+
+
+From 3e5e5388636b78ba4d5a5588d5ec8d8f1f3244ef Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Tue, 1 Mar 2016 23:06:30 -0800
+Subject: [PATCH 75/83] Step 24.2: Create a new reactive variable
+
+---
+ client/recipes/recipe.js | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/client/recipes/recipe.js b/client/recipes/recipe.js
+index 3d8afbc..905a0e6 100644
+--- a/client/recipes/recipe.js
++++ b/client/recipes/recipe.js
+@@ -1,3 +1,9 @@
++Template.Recipe.onCreated(function(){
++	this.editMode = new ReactiveVar(false);
++	//	this.editMode = new ReactiveVar();
++	// this.editMode.set(false);
++});
++
+ Template.Recipe.helpers({
+ 	updateRecipeId: function() {
+ 		return this._id;
+-- 
+2.2.1
+
+
+From 6e03dd7ea434389566a239d469d41eee697cac46 Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Tue, 1 Mar 2016 23:16:16 -0800
+Subject: [PATCH 76/83] Step 24.3: Update the click event to use the reactive
+ var
+
+---
+ client/recipes/recipe.js | 4 ++--
+ 1 file changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/client/recipes/recipe.js b/client/recipes/recipe.js
+index 905a0e6..0c1cda7 100644
+--- a/client/recipes/recipe.js
++++ b/client/recipes/recipe.js
+@@ -17,7 +17,7 @@ Template.Recipe.events({
+ 	'click .fa-trash': function () {
+ 		Meteor.call('deleteRecipe', this._id);
+ 	},
+-	'click .fa-pencil': function () {
+-		Session.set('editMode', !Session.get('editMode'));
++	'click .fa-pencil': function (event, template) {
++		template.editMode.set(!template.editMode.get());
+ 	}
+ });
+\ No newline at end of file
+-- 
+2.2.1
+
+
+From 42b6308175fb37ea88414e2cd023a842533e1e28 Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Tue, 1 Mar 2016 23:31:37 -0800
+Subject: [PATCH 77/83] Step 24.4: Update the Recipe template to use a helper
+
+---
+ client/recipes/Recipe.html | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/client/recipes/Recipe.html b/client/recipes/Recipe.html
+index 9fbeee8..c3ae000 100644
+--- a/client/recipes/Recipe.html
++++ b/client/recipes/Recipe.html
+@@ -1,7 +1,7 @@
+ <template name="Recipe">
+ 	<article class="recipe {{#if inMenu}}in-menu{{/if}}">
+ 		<h3>{{name}}</h3>
+-		{{#if $.Session.get 'editMode'}}
++		{{#if editMode}}
+ 			{{> quickForm collection="Recipes" id=updateRecipeId type="update" doc=this autosave=true}}
+ 		{{else}}
+ 			<p>{{desc}}</p>
+-- 
+2.2.1
+
+
+From 26a11eadcad883509c0f4f740b10a9ca8692ba1d Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Tue, 1 Mar 2016 23:44:27 -0800
+Subject: [PATCH 78/83] Step 24.5: Register a helper for editMode
+
+---
+ client/recipes/recipe.js | 3 +++
+ 1 file changed, 3 insertions(+)
+
+diff --git a/client/recipes/recipe.js b/client/recipes/recipe.js
+index 0c1cda7..204df77 100644
+--- a/client/recipes/recipe.js
++++ b/client/recipes/recipe.js
+@@ -7,6 +7,9 @@ Template.Recipe.onCreated(function(){
+ Template.Recipe.helpers({
+ 	updateRecipeId: function() {
+ 		return this._id;
++	},
++	editMode: function(){
++		return Template.instance().editMode.get();
+ 	}
+ });
+ 
+-- 
+2.2.1
+
+
+From 288647d9394ef0ac7b5adfd05ff46d1c7a21d896 Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Wed, 2 Mar 2016 00:06:57 -0800
+Subject: [PATCH 79/83] Step 25.1: Add a button to toggle the new recipe form
+
+---
+ client/recipes/Recipes.html | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/client/recipes/Recipes.html b/client/recipes/Recipes.html
+index 95889e5..2525132 100644
+--- a/client/recipes/Recipes.html
++++ b/client/recipes/Recipes.html
+@@ -1,4 +1,5 @@
+ <template name="Recipes">
++	<button class="new-recipe">New Recipe</button>
+ 	{{> NewRecipe}}
+ 	<section class="recipes">
+ 		{{#if Template.subscriptionsReady}}
+-- 
+2.2.1
+
+
+From 9488d833ec92af635bd8bee26716d64fee52217d Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Wed, 2 Mar 2016 00:14:32 -0800
+Subject: [PATCH 80/83] Step 25.2: Add a close button on the new recipe form
+
+---
+ client/recipes/NewRecipe.html | 1 +
+ 1 file changed, 1 insertion(+)
+
+diff --git a/client/recipes/NewRecipe.html b/client/recipes/NewRecipe.html
+index 2fb78a6..197ad58 100644
+--- a/client/recipes/NewRecipe.html
++++ b/client/recipes/NewRecipe.html
+@@ -1,5 +1,6 @@
+ <template name="NewRecipe">
+ 	<div class="new-recipe-container">
++		<i class="fa fa-close"></i>
+ 		{{> quickForm collection="Recipes" id="insertRecipeForm" type="insert" class="new-recipe-form"}}
+ 	</div>
+ </template>
+\ No newline at end of file
+-- 
+2.2.1
+
+
+From 24ee1c001af6b2d248b570f96044c6b21dcc5fce Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Wed, 2 Mar 2016 00:20:06 -0800
+Subject: [PATCH 81/83] Step 25.3: Set a session variable to toggle the new
+ form
+
+---
+ client/recipes/NewRecipe.js | 5 +++++
+ 1 file changed, 5 insertions(+)
+ create mode 100644 client/recipes/NewRecipe.js
+
+diff --git a/client/recipes/NewRecipe.js b/client/recipes/NewRecipe.js
+new file mode 100644
+index 0000000..e15a0dc
+--- /dev/null
++++ b/client/recipes/NewRecipe.js
+@@ -0,0 +1,5 @@
++Template.NewRecipe.events({
++	'click .fa-close': function() {
++		Session.set('newRecipe', false);
++	}
++});
+\ No newline at end of file
+-- 
+2.2.1
+
+
+From ba10e0c18b3b6666a583877119fc2abe4af05657 Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Wed, 2 Mar 2016 00:24:57 -0800
+Subject: [PATCH 82/83] Step 25.4: Set a session variable for the new recipe
+ button to toggle the new recipe form
+
+---
+ client/recipes.js | 6 ++++++
+ 1 file changed, 6 insertions(+)
+
+diff --git a/client/recipes.js b/client/recipes.js
+index f0e3f68..5b7a526 100644
+--- a/client/recipes.js
++++ b/client/recipes.js
+@@ -9,4 +9,10 @@ Template.Recipes.helpers({
+ 	recipes: ()=> {
+ 		return Recipes.find({});
+ 	}
++});
++
++Template.Recipes.events({
++	'click .new-recipe': () => {
++		Session.set('newRecipe', true);
++	}
+ });
+\ No newline at end of file
+-- 
+2.2.1
+
+
+From 2e0a1b4f343cacb0696af626d8caa55544c4e51b Mon Sep 17 00:00:00 2001
+From: Shavonnah <Sh@vonnah.com>
+Date: Wed, 2 Mar 2016 00:34:41 -0800
+Subject: [PATCH 83/83] Step 25.5: Add a session helper to the Recipes.html
+ template
+
+---
+ client/recipes/Recipes.html | 7 +++++--
+ 1 file changed, 5 insertions(+), 2 deletions(-)
+
+diff --git a/client/recipes/Recipes.html b/client/recipes/Recipes.html
+index 2525132..497d6df 100644
+--- a/client/recipes/Recipes.html
++++ b/client/recipes/Recipes.html
+@@ -1,6 +1,9 @@
+ <template name="Recipes">
+-	<button class="new-recipe">New Recipe</button>
+-	{{> NewRecipe}}
++	{{#if $.Session.get 'newRecipe'}}
++		{{> NewRecipe}}
++	{{else}}
++		<button class="new-recipe">New Recipe</button>
++	{{/if}}	
+ 	<section class="recipes">
+ 		{{#if Template.subscriptionsReady}}
+ 			{{#each recipes}}
+-- 
+2.2.1
+>>>>>>> e7eba0f9fdd016e959fb37b7e21d1938319abdb0
 
