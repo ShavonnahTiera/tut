@@ -1,6 +1,6 @@
 if (Meteor.isClient) {
   DiffBox.registerTutorial("intermediate", {
-    gitHubRepoName: "ShavonnahTiera/intermediate",
+    gitHubRepoName: "meteor-tuts/intermediate",
     patchFilename: "generated/intermediate.multi.patch"
   });
 }
