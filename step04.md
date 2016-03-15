@@ -13,7 +13,7 @@ To display our interior pages for our app we are going to create a file inside o
 
 {{> DiffBox tutorialName="intermediate" step="4.2"}}
 
-The `template.dynamic` tag allows you to create a template area that is equal to `main` to render content into. In the `header` we add a heading called "My Recipe Book" along with the standard `{{> loginButtons}}` that come along with the `accounts-ui` package.
+The `template.dynamic` tag allows you to create a template area that is equal to `main` to render content into. In the `header` we add a heading called "My Recipe Book" along with the standard `{{dstache}}> loginButtons}}` that come along with the `accounts-ui` package.
 
 FlowRouter will allow us to render, or display content, in the `main` section of our `MainLayout` template.
 
