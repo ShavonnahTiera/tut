@@ -29,7 +29,7 @@ There's a lot to learn so let's dive in.
 [Level Up Tutorials Intermediate Meteor Youtube](https://www.youtube.com/watch?v=BI8IslJHSag&list=PLLnpHn493BHFYZUSK62aVycgcAouqBt7V)
 
 [RecipeBook]: /images/RecipeBook.png
-[NewRecipe]: ../images/NewRecipe.png
+[NewRecipe]: /images/NewRecipe.png
 [EditRecipe]: /images/EditRecipe.png
 [Menu]: /images/Menu.png
 [ShoppingList]: /images/ShoppingList.png
