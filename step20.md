@@ -12,7 +12,7 @@ Watch: [Create a template for Menu Items](https://youtu.be/AujL3lzXroA "Level Up
 
 ### Show alternate text if there are no menu items
 
-If we remove all of our recipes from our menu, we are left with a blank page. Not the best user experience. We can use the `{{dstache}}#each}} ... {{else}} ... {{/each}}` helper to include a notice to the user to add items to thier menu.
+If we remove all of our recipes from our menu, we are left with a blank page. Not the best user experience. We can use the `{{dstache}}#each}} ... {{dstache}}else}} ... {{dstache}}/each}}` helper to include a notice to the user to add items to thier menu.
 
 {{> DiffBox tutorialName="intermediate" step="20.2"}}
 
