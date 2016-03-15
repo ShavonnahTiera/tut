@@ -11,7 +11,7 @@ We can use a quickForm to update the recipes, just as we used one to insert the 
 
 - `id=updateRecipeId` - we'll crate a helper for this form instead of using a css id property,
 - `type="update"` - 
-- `doc=this` - This `Recipe` template is within an `{{#each}}` loop. The MongoDB `doc` we update will be the current item, `this` in the loop.
+- `doc=this` - This `Recipe` template is within an `{{dstache}}#each}}` loop. The MongoDB `doc` we update will be the current item, `this` in the loop.
 
 Watch: [Create a quickForm to update the recipes](https://youtu.be/BTMrwey7UXQ "Level Up Tutorials: Intermediate Meteor Tutorial #22 - Youtube")
 

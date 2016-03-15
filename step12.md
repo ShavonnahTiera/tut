@@ -4,7 +4,7 @@
 
 On our Recipe Book page, we are going to create a listing of our individual recipes.
 
-To get the individual recipes to display, we are going to loop, or iterate, over a cursor from our database. First let's set up our template to loop through `{{#each}}` of the recipes and output the single recipe template.
+To get the individual recipes to display, we are going to loop, or iterate, over a cursor from our database. First let's set up our template to loop through `{{dstache}}#each}}` of the recipes and output the single recipe template.
 
 <!-- Recipes.html -->
 {{> DiffBox tutorialName="intermediate" step="12.1"}}

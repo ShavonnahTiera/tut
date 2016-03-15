@@ -20,7 +20,9 @@ Head over to the browser and create a user account.
 
 Next, back in your editor, open your `.meteor/packages` file and replace the `msavin:jetsetter` package with `meteortoys:allthings`.
 
-{{> DiffBox tutorialName="intermediate" step="8.2"}}
+#### Step 8.2
+
+`meteor add: meteortoys:allthings`
 
 The Meteor Toys package give you access to a Mongol server, JetSetter and more right from your browser. To open, make sure your app is running, click `control-M` inside of your browser window. You'll see an overlay with the Meteor Toys components.
 

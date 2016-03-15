@@ -9,8 +9,8 @@ localhost:3000/recipe/u04cqhcq8sW    # u04cqhcq8sW is the unique Mongo _id`
 
 ### Adding a link to a route
 
-We start by going inside of our `Recipe` template that is being iterated over to create our Recipe-List. Below the `{{#each ingredients}}` loop we add a `View Details` link with a url that has a helper for `{{_id}}`.
-<!-- add link -->
+We start by going inside of our `Recipe` template that is being iterated over to create our Recipe-List. Below the `{{dstache}}#each ingredients}}` loop we add a `View Details` link with a url that has a helper for `{{dstache}}>_id}}`.
+
 {{> DiffBox tutorialName="intermediate" step="14.1"}}
 
 If you open up your JavaScript console and click one of the `View Details` links, you'll see a FlowRouter error with a link that has the unique `_id` of that recipe. When we subscribed to our recipe collection in Step 8 we sent data from our `Recipes` collection to this template along with the `_id` of each individual recipe. This data is where the `id` is pulled from.

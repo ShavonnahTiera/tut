@@ -8,7 +8,6 @@ The `settings.json` file holds private variables including API keys for use by d
 
 In the root of your app directory, create a `settings.json` file.
 
-<!-- settings.json -->
 {{> DiffBox tutorialName="intermediate" step="10.1"}}
 
 Inside your `settings.json` file create an object. You can create a `public` object to hold public keys like a Google Analytics account number and a `private` object to hold sensitive keys like a Stripe API key.
@@ -65,7 +64,8 @@ Using FlowRouter and the `datariot:ganalytics` package, we can add our Google An
 First, install the `datariot:ganalytics` package in your `.meteor/packages.js` file.
 
 <!-- Add analytics package -->
-{{> DiffBox tutorialName="intermediate" step="10.2"}}
+#### Step 10.2
+`meteor add: datariot:ganalytics`
 
 Inside of `router.js`, we can register a page view to each of our routes before the layout renders.
 
