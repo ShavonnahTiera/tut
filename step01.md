@@ -8,15 +8,15 @@ In this tutorial created by Scott Tolinski from [Level Up Tutorials](http://leve
 - Add and remove recipes from a menu
 - Automatically create a shopping list of ingredients from the menu
 
-![alt text][RecipeBook]
-![alt text][NewRecipe]
-![alt text][Menu]
-![alt text][ShoppingList]
+![Recipe Book][RecipeBook]
+![New Recipe][NewRecipe]
+![Menu page][Menu]
+![Shopping List][ShoppingList]
 
 And of course, the app is responsive:
 
-![alt text][Mobile-ShoppingList]
-![alt text][Mobile-RecipeBook]
+![Mobile Shopping List][Mobile-ShoppingList]
+![Mobile Recipe Book][Mobile-RecipeBook]
 
 ### Intermediate Skills
 
