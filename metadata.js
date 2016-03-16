@@ -5,6 +5,10 @@ if (Meteor.isClient) {
   });
 }
 
+<<<<<<< HEAD
+=======
+
+>>>>>>> 2dd4ffe8c64dbc8a18c4043e5b709eb23d4a8885
 TutorialRegistry.registerTutorial("intermediate", {
   title: "Intermediate Meteor",
   subtitle: "Build a recipe app with Scott from Level Up Tutorials",
