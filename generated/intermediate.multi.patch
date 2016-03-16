@@ -137,7 +137,7 @@ index 17859ef..57a7b54 100644
  webapp-hashing@1.0.5
 +zimme:active-route@2.3.2
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 5ad57166840386bf708e662fcff9b93482fb2675 Mon Sep 17 00:00:00 2001
@@ -161,7 +161,7 @@ index 0000000..41147dd
 +});
 \ No newline at end of file
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From d0d062055301828a6b2cd30bf9d7a7587cfb0f8f Mon Sep 17 00:00:00 2001
@@ -267,7 +267,7 @@ index 0000000..b6b4052
 @@ -0,0 +1 @@
 +/* CSS declarations go here */
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 5815946d95aae5c389e9207df156460047442380 Mon Sep 17 00:00:00 2001
@@ -299,7 +299,7 @@ index 9bfe08c..2bc5d43 100644
 -  <p>You've pressed the button {{counter}} times.</p>
 -</template>
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From f857662d6467d013329d0ab429234b0c7b7d73f8 Mon Sep 17 00:00:00 2001
@@ -329,7 +329,7 @@ index 0000000..cd6966e
 + </template>
 \ No newline at end of file
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From b8b89dfba3e98f726970a16fcd258db12501f756 Mon Sep 17 00:00:00 2001
@@ -361,7 +361,7 @@ index 0000000..226aab1
 +</template>
 \ No newline at end of file
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From bbc8723e95319fc3e0aca91b01594bfe3c1b7161 Mon Sep 17 00:00:00 2001
@@ -388,7 +388,7 @@ index 0000000..371ae64
 +});
 \ No newline at end of file
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From f110037d0add8f3dc0f82cffec50a3573d6b52fc Mon Sep 17 00:00:00 2001
@@ -418,7 +418,7 @@ index cd6966e..3972048 100644
 +</template>
 \ No newline at end of file
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 193f07a8dd65030310d57722c5b394df072b5fa7 Mon Sep 17 00:00:00 2001
@@ -449,7 +449,7 @@ index 371ae64..6d53c73 100644
  });
 \ No newline at end of file
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 180965574f2bc7f3ef7ee05c66c7d9b97c434ae8 Mon Sep 17 00:00:00 2001
@@ -498,7 +498,7 @@ index 0000000..c706ac0
 +Recipes.attachSchema(RecipeSchema);
 \ No newline at end of file
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 97b46f9116f7d51a3559b92558e6a996ab7d26cd Mon Sep 17 00:00:00 2001
@@ -524,7 +524,7 @@ index 3972048..a08d5c1 100644
 -</template>
 \ No newline at end of file
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 0237bb5ac6f7cd3fe83e9a5971b8e96a65a08b02 Mon Sep 17 00:00:00 2001
@@ -555,7 +555,7 @@ index 6d53c73..3d6f4e5 100644
  });
 \ No newline at end of file
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From a0d29c1b7e7f8b770b5609eb14bdc933cc84d4e6 Mon Sep 17 00:00:00 2001
@@ -579,7 +579,7 @@ index 0000000..17d72da
 +</template>
 \ No newline at end of file
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 8be62fbf77615469a8024ba76c62470c02f03228 Mon Sep 17 00:00:00 2001
@@ -605,7 +605,7 @@ index 0000000..2fb78a6
 +</template>
 \ No newline at end of file
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From cb55f1c786af2f87e4b42b443214b27756723e7b Mon Sep 17 00:00:00 2001
@@ -642,7 +642,7 @@ index c706ac0..3f3e6ea 100644
  	}
  });
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From c268adf11ab071d69ab518daadb775ec6d147853 Mon Sep 17 00:00:00 2001
@@ -664,7 +664,7 @@ index e69de29..088329c 100644
 +});
 \ No newline at end of file
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 67a6323951204220e9052d20d6f115b22e898c23 Mon Sep 17 00:00:00 2001
@@ -750,7 +750,7 @@ index 57a7b54..3816c44 100644
  npm-mongo@1.4.39_1
  observe-sequence@1.0.7
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From d5118da4778e08cde59d1371ea0b1ee9be801398 Mon Sep 17 00:00:00 2001
@@ -780,7 +780,7 @@ index 3f3e6ea..513b91d 100644
  	name: {
  		type: String,
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From ad3a445018a2a8aa788b9396867813d07b26bd46 Mon Sep 17 00:00:00 2001
@@ -802,7 +802,7 @@ index 0000000..f6a47b0
 +Meteor.subscribe('recipes');
 \ No newline at end of file
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From b3cc9779ca86c112f3d249c24940b33ba880caf3 Mon Sep 17 00:00:00 2001
@@ -845,7 +845,7 @@ index 513b91d..89ae2b6 100644
  		type: String,
  		label: "Author",
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 39d42cd62a913e4ab4743342c3bfa551f0fc81ea Mon Sep 17 00:00:00 2001
@@ -878,7 +878,7 @@ index 89ae2b6..f4cb3c7 100644
  		type: String,
  		label: "Author",
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 7cd8b9e40f54b72846b935355ccad815e70d2456 Mon Sep 17 00:00:00 2001
@@ -912,7 +912,7 @@ index 0000000..57740b4
 +}
 \ No newline at end of file
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 218538ce8de41abbaaf9d582855ab9c689c8cc1f Mon Sep 17 00:00:00 2001
@@ -951,7 +951,7 @@ index 3816c44..d99c111 100644
  ddp@1.2.2
  ddp-client@1.2.1
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 7e826b5bfdcfac55a15e0554ad34f646d3f5b01c Mon Sep 17 00:00:00 2001
@@ -985,7 +985,7 @@ index 3d6f4e5..582d785 100644
  });
 \ No newline at end of file
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From c4fc311a81fb5ef1724c3ce63b729c560dd9c284 Mon Sep 17 00:00:00 2001
@@ -1395,7 +1395,7 @@ index b6b4052..38eb553 100644
 +        a 
 +            color dark-purp
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 64eb19434424b33acb93b73ac1af310580bc2da2 Mon Sep 17 00:00:00 2001
@@ -1426,7 +1426,7 @@ index 0000000..f5873b2
 +</template>
 \ No newline at end of file
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 6a73a009df604dce8af801082159d7d85bd8bbad Mon Sep 17 00:00:00 2001
@@ -1453,7 +1453,7 @@ index a08d5c1..d657dc8 100644
   	</main>
   </template>
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 193368b5f72c4053f745a00e34623834ee198e4f Mon Sep 17 00:00:00 2001
@@ -1480,7 +1480,7 @@ index 0000000..c318720
 +</template>
 \ No newline at end of file
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From eaa4cfee5150cbe711b980cc539dace710c75715 Mon Sep 17 00:00:00 2001
@@ -1507,7 +1507,7 @@ index d657dc8..e5e9f6c 100644
   	<main class="main-layout">
  		{{> Template.dynamic template=main}}
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From c9541e2f4c934c1a4c7ea673e23ff55b39d60cd7 Mon Sep 17 00:00:00 2001
@@ -1534,7 +1534,7 @@ index 226aab1..3a1bda9 100644
  			<div class="billboard">
  				<h2>Organize your Meals</h2>
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 64d10de4348521ec73412c32443ca5fc40ffd88b Mon Sep 17 00:00:00 2001
@@ -1561,7 +1561,7 @@ index 17d72da..6bf78da 100644
  </template>
 \ No newline at end of file
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 28cad887c71351c47c2a669a1fad86710736e993 Mon Sep 17 00:00:00 2001
@@ -1589,7 +1589,7 @@ index f6a47b0..434c4dd 100644
 +});
 \ No newline at end of file
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From f0ecfa1a8518ee41da856277567524d78d8d6f5e Mon Sep 17 00:00:00 2001
@@ -1621,7 +1621,7 @@ index 0000000..ca8e664
 +</template>
 \ No newline at end of file
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 30d95f8a95b618cd35cb8b000d1be12609d71ed7 Mon Sep 17 00:00:00 2001
@@ -1649,7 +1649,7 @@ index 434c4dd..f0e3f68 100644
  Template.Recipes.helpers({
  	recipes: ()=> {
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 1209cc9a239a02e7b7303e3d011e65fda306dbf8 Mon Sep 17 00:00:00 2001
@@ -1681,7 +1681,7 @@ index 6bf78da..95889e5 100644
  </template>
 \ No newline at end of file
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 1203c3055da5ce2f881b1403069f875a783dda7c Mon Sep 17 00:00:00 2001
@@ -1706,7 +1706,7 @@ index ca8e664..239bc2a 100644
  </template>
 \ No newline at end of file
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 25159492fb16b7bd5c427a035375cc73c4df2053 Mon Sep 17 00:00:00 2001
@@ -1737,7 +1737,7 @@ index 582d785..c9505f8 100644
  });
 \ No newline at end of file
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 8d963b80624451c1dd2929a6f88cd771ffefa20d Mon Sep 17 00:00:00 2001
@@ -1762,7 +1762,7 @@ index 0000000..89966aa
 +</template>
 \ No newline at end of file
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 8a53961ca7e54e9ba366990b9eddec7311440422 Mon Sep 17 00:00:00 2001
@@ -1796,7 +1796,7 @@ index 0000000..b7e119c
 +});
 \ No newline at end of file
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 721b40b5db6273c1272843de218fce0bc176fa3c Mon Sep 17 00:00:00 2001
@@ -1823,7 +1823,7 @@ index 088329c..7c029c8 100644
  });
 \ No newline at end of file
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 8e4e392ebe86cfd93d1f59d766c75294554d61a5 Mon Sep 17 00:00:00 2001
@@ -1850,7 +1850,7 @@ index 57dd5db..be838ba 100644
 +check
 \ No newline at end of file
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From deab00b1549c81fd02bf61bc2bf2bb3624a3aeba Mon Sep 17 00:00:00 2001
@@ -1877,7 +1877,7 @@ index b7e119c..878e4fd 100644
  });
  
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 153bce708e5862e4173905a4596b3cbb4a376b88 Mon Sep 17 00:00:00 2001
@@ -1905,7 +1905,7 @@ index c9505f8..7d1f1f3 100644
  		BlazeLayout.render('MainLayout', {main: 'Recipes'});
  	}
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From c1d54fb882e1f438a33c53ee938a9102fc68709d Mon Sep 17 00:00:00 2001
@@ -1933,7 +1933,7 @@ index 7d1f1f3..fc54fe5 100644
  	name: 'home',
  	action() {
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 457ef757be911bd82b3260c73e10d8d1c7ab3207 Mon Sep 17 00:00:00 2001
@@ -1963,7 +1963,7 @@ index fc54fe5..93b81ad 100644
  	if(!Meteor.userId()) {
  		FlowRouter.go('home');
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 48ee3d4477016910b2d5bc1087221e3d7c99d217 Mon Sep 17 00:00:00 2001
@@ -1989,7 +1989,7 @@ index 239bc2a..394f61f 100644
  </template>
 \ No newline at end of file
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 1f22920a532268ff9c910870275307d2265eb1ce Mon Sep 17 00:00:00 2001
@@ -2015,7 +2015,7 @@ index 0000000..7dc97a7
 +});
 \ No newline at end of file
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 8173911473516b2739afda1463ae8bf7439b8967 Mon Sep 17 00:00:00 2001
@@ -2043,7 +2043,7 @@ index f4cb3c7..d9756c2 100644
  });
  
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 9f792b7c7c987c25a185c3c494e677884da3b384 Mon Sep 17 00:00:00 2001
@@ -2076,7 +2076,7 @@ index d9756c2..2af0b62 100644
  Recipes.attachSchema(RecipeSchema);
 \ No newline at end of file
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 141f6d5745fcaea5e058790680f095dcedb0d6ef Mon Sep 17 00:00:00 2001
@@ -2102,7 +2102,7 @@ index 7dc97a7..2c9b00f 100644
  });
 \ No newline at end of file
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From eea34dd41b0bf838fb8db532005eb32ce5893111 Mon Sep 17 00:00:00 2001
@@ -2126,7 +2126,7 @@ index 394f61f..ee3caeb 100644
  		<p>{{desc}}</p>
  			<p>
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 7e3a0fa1bcefc2b71ac3ece610966453c0c8ecdc Mon Sep 17 00:00:00 2001
@@ -2165,7 +2165,7 @@ index 38eb553..89edc30 100644
      h3
          font-size: 3em;
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 1a285b39a9511f41968c286dfeb9c9f7d690b110 Mon Sep 17 00:00:00 2001
@@ -2195,7 +2195,7 @@ index 93b81ad..af46539 100644
  });
 \ No newline at end of file
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From c4d43c52c4313828bc29b61a886842facecaf8ca Mon Sep 17 00:00:00 2001
@@ -2223,7 +2223,7 @@ index 0000000..fa91362
 +</template>
 \ No newline at end of file
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 1dbd9a498d09a922533e8e471b2f28db85a5d44c Mon Sep 17 00:00:00 2001
@@ -2256,7 +2256,7 @@ index 0000000..194214a
 +});
 \ No newline at end of file
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From b3053b535ef54930a25b6eaf11ea19e4e53f9ad1 Mon Sep 17 00:00:00 2001
@@ -2289,7 +2289,7 @@ index fa91362..0ce9f86 100644
  </template>
 \ No newline at end of file
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 657a1a8dcedd67328ee7481d1defc805ade60e40 Mon Sep 17 00:00:00 2001
@@ -2316,7 +2316,7 @@ index 0ce9f86..c26a72e 100644
  </template>
  
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 43f518ad7d30e43ce44796ddcf50b91fe276b78b Mon Sep 17 00:00:00 2001
@@ -2354,7 +2354,7 @@ index 89edc30..b8a2105 100644
          font-size: 3em;
          opacity: 0.3;
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From a99dc1390820b638e6bb2224de2dcc3d2e645216 Mon Sep 17 00:00:00 2001
@@ -2385,7 +2385,7 @@ index ee3caeb..60bc67c 100644
  </template>
 \ No newline at end of file
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 1f32e4c59d77b63b22ea34313cbfb764551ec01b Mon Sep 17 00:00:00 2001
@@ -2418,7 +2418,7 @@ index 0000000..e309eef
 +</template>
 \ No newline at end of file
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 71edc72385a922506827afab0a5ff58ae5664ee0 Mon Sep 17 00:00:00 2001
@@ -2448,7 +2448,7 @@ index af46539..03945b9 100644
  });
 \ No newline at end of file
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 9ac78707245e8fdec114328c9f448c4bb5473385 Mon Sep 17 00:00:00 2001
@@ -2482,7 +2482,7 @@ index 0000000..3e13ac1
 +});
 \ No newline at end of file
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 6a3721f6fc93b4cb6dede5e1858a864493ed8943 Mon Sep 17 00:00:00 2001
@@ -2507,7 +2507,7 @@ index 60bc67c..65a4d38 100644
  </template>
 \ No newline at end of file
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From b93e9a10c9bdbfe665a5f86bff00164e678f45fc Mon Sep 17 00:00:00 2001
@@ -2534,7 +2534,7 @@ index 2c9b00f..6ed3dd7 100644
  	'click .toggle-menu': function(){
  		Meteor.call('toggleMenuItem', this._id, this.inMenu);
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 6c6dca9b92dd6f1e71a0876d59b80858ff00a995 Mon Sep 17 00:00:00 2001
@@ -2560,7 +2560,7 @@ index 65a4d38..9fe9e00 100644
  </template>
 \ No newline at end of file
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 31d7618f855ae6e1696f42189859d4c7ca137772 Mon Sep 17 00:00:00 2001
@@ -2585,7 +2585,7 @@ index 9fe9e00..227157e 100644
  				<button class="btn-deny toggle-menu">Remove from Menu</button>
  			{{else}}
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 0a06332dc970a0a3a6ccb3d1aafe5f9b6bee65ed Mon Sep 17 00:00:00 2001
@@ -2612,7 +2612,7 @@ index 2af0b62..9d9cc31 100644
  });
  
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 29a4e1a94a359e870f0b24dc1f3cba3be41422c3 Mon Sep 17 00:00:00 2001
@@ -2640,7 +2640,7 @@ index 6ed3dd7..34706a3 100644
  });
 \ No newline at end of file
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 8a74acd0b03f6a11d5299bc7636f3be4d3c7b677 Mon Sep 17 00:00:00 2001
@@ -2665,7 +2665,7 @@ index 227157e..09fee4d 100644
  				<button class="btn-deny toggle-menu">Remove from Menu</button>
  			{{else}}
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 7d52d18f18aa812f50f8fbcdc2a19b468e5defcb Mon Sep 17 00:00:00 2001
@@ -2702,7 +2702,7 @@ index b8a2105..fc769f7 100644
          display inline-block
          margin-right 10px 
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From b558af99b71496c0bf465fbfab40249ce5dbb5a9 Mon Sep 17 00:00:00 2001
@@ -2731,7 +2731,7 @@ index 09fee4d..d6d93c1 100644
  </template>
 \ No newline at end of file
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 84a937a599fa98939ce0e503032b169f09ced419 Mon Sep 17 00:00:00 2001
@@ -2759,7 +2759,7 @@ index 34706a3..3d8afbc 100644
  });
 \ No newline at end of file
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From f7fc7be201e48874882d41b903986df7f45063c6 Mon Sep 17 00:00:00 2001
@@ -2807,7 +2807,7 @@ index d6d93c1..9fbeee8 100644
  </template>
 \ No newline at end of file
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 4bc35dda13203d63924300a30544168b7a0511ed Mon Sep 17 00:00:00 2001
@@ -2832,7 +2832,7 @@ index be838ba..01f4058 100644
  standard-minifiers      # JS/CSS minifiers run for production mode
  es5-shim                # ECMAScript 5 compatibility for older browsers.
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 3e5e5388636b78ba4d5a5588d5ec8d8f1f3244ef Mon Sep 17 00:00:00 2001
@@ -2859,7 +2859,7 @@ index 3d8afbc..905a0e6 100644
  	updateRecipeId: function() {
  		return this._id;
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 6e03dd7ea434389566a239d469d41eee697cac46 Mon Sep 17 00:00:00 2001
@@ -2888,7 +2888,7 @@ index 905a0e6..0c1cda7 100644
  });
 \ No newline at end of file
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 42b6308175fb37ea88414e2cd023a842533e1e28 Mon Sep 17 00:00:00 2001
@@ -2914,7 +2914,7 @@ index 9fbeee8..c3ae000 100644
  		{{else}}
  			<p>{{desc}}</p>
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 26a11eadcad883509c0f4f740b10a9ca8692ba1d Mon Sep 17 00:00:00 2001
@@ -2941,7 +2941,7 @@ index 0c1cda7..204df77 100644
  });
  
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 288647d9394ef0ac7b5adfd05ff46d1c7a21d896 Mon Sep 17 00:00:00 2001
@@ -2964,7 +2964,7 @@ index 95889e5..2525132 100644
  	<section class="recipes">
  		{{#if Template.subscriptionsReady}}
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 9488d833ec92af635bd8bee26716d64fee52217d Mon Sep 17 00:00:00 2001
@@ -2989,7 +2989,7 @@ index 2fb78a6..197ad58 100644
  </template>
 \ No newline at end of file
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 24ee1c001af6b2d248b570f96044c6b21dcc5fce Mon Sep 17 00:00:00 2001
@@ -3016,7 +3016,7 @@ index 0000000..e15a0dc
 +});
 \ No newline at end of file
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From ba10e0c18b3b6666a583877119fc2abe4af05657 Mon Sep 17 00:00:00 2001
@@ -3046,7 +3046,7 @@ index f0e3f68..5b7a526 100644
  });
 \ No newline at end of file
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
 
 From 2e0a1b4f343cacb0696af626d8caa55544c4e51b Mon Sep 17 00:00:00 2001
@@ -3076,5 +3076,5 @@ index 2525132..497d6df 100644
  		{{#if Template.subscriptionsReady}}
  			{{#each recipes}}
 -- 
-2.5.4 (Apple Git-61)
+2.2.1
 
