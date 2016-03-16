@@ -5,10 +5,14 @@ if (Meteor.isClient) {
   });
 }
 
+<<<<<<< HEAD
 TutorialRegistry.registerTutorial("intermediate", {
+=======
+TutorialRegistry.registerTutorial("blaze", {
+>>>>>>> parent of 4fbf04a... Make it into a package and add some small fixes
   title: "Intermediate Meteor",
   subtitle: "Build a recipe app with Scott from Level Up Tutorials",
-  tutorialSourceLink: "github.com/meteor/tut",
+  tutorialSourceLink: "github.com/ShavonnahTiera/intermediate",
   steps: [
     {
       title: 'What we are creating',
