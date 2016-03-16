@@ -1,4 +1,4 @@
-<!-- {{> DiffBox tutorialName="simple-todos" step="2.1"}} -->
+{{#template name="intermediate-step01"}}
 ### What We're creating
 
 In this tutorial created by Scott Tolinski from [Level Up Tutorials](http://leveluptutorials.com) we'll build a recipe book that allows users to:
@@ -35,4 +35,4 @@ There's a lot to learn so let's dive in.
 [HomeLayout]: /images/HomeLayout.png
 [Mobile-ShoppingList]: /images/Mobile-ShoppingList.png
 [Mobile-RecipeBook]: /images/Mobile-RecipeBook.png
-
+{{/template}}
