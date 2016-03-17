@@ -20,7 +20,7 @@ Watch: [Show alternate text if there are no menu items](https://youtu.be/AujL3lz
 
 ### Clean up our recipe
 
-Previously, we changed our css to hide our `toggle-buttons`. A way to have the same effect programatically would be to use an `{{dstache}}#if}}/{{dstache}}{{else}}` helper to check if `inMenu` is set to true and display the 'Remove from Menu' button, `else`, display the 'Add to Menu' button.
+Previously, we changed our css to hide our `toggle-buttons`. A way to have the same effect programatically would be to use an `{{dstache}}#if}}/{{dstache}}else}}` helper to check if `inMenu` is set to true and display the 'Remove from Menu' button, `else`, display the 'Add to Menu' button.
 
 {{> DiffBox tutorialName="intermediate" step="20.3"}}
 

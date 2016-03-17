@@ -2,7 +2,7 @@
 
 # Defining a Schema in Meteor
 
-<!-- In this project we're using `aldeed:collection2` and `aldeed:autoform` packages to make it easy for us to define schemas and generate forms from those schemas.
+In this project we're using `aldeed:collection2` and `aldeed:autoform` packages to make it easy for us to define schemas and generate forms from those schemas.
 
 ### Defining a collection
 
@@ -30,6 +30,6 @@ Here are the schema properties we are using to generate the autoform:
 
 Lastly, we attach the schema to our collection with: `Recipes.attachSchema(RecipeSchema);`
 
-Watch: [Defining a collection](https://youtu.be/KK42dBBfaaU?t=1m28s "Level Up Tutorials: Intermediate Meteor Tutorial #6 - Youtube") -->
+Watch: [Defining a collection](https://youtu.be/KK42dBBfaaU?t=1m28s "Level Up Tutorials: Intermediate Meteor Tutorial #6 - Youtube")
 
 {{/template}}
