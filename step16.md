@@ -7,9 +7,9 @@ One thing you may have noticed is that wheter or not the user is logged in the d
 ### Automatically redirect logged in users
 
 <!-- if Meteor action -->
-{{> DiffBox tutorialName="intermediate" step="16.1"}}
+{{> DiffBox tutorialName="intermediate" step="16.1"}}	
 
-The built in `Meteor.userId();` function is super handy to check whether or not a user is logged in. Once we check to see if this returns true, we can use FlowRouters `.go();` function to route our logged in user to a page using the routes `name`.
+The built in `Meteor.userId();` function is super handy to check whether or not a user is logged in. Once we check to see if this returns true, we can use FlowRouters `.go();` function to route our logged in user to a page using the routes `name`. 
 
 Watch: [Automatically redirect logged in users](https://youtu.be/aBiXUyJW0cs "Level Up Tutorials: Intermediate Meteor Tutorial #16 - Youtube")
 

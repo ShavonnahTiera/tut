@@ -1,6 +1,6 @@
 if (Meteor.isClient) {
   DiffBox.registerTutorial("intermediate", {
-    gitHubRepoName: "ShavonnahTiera/intermediate",
+    gitHubRepoName: "meteor-tuts/intermediate",
     patchFilename: "generated/intermediate.multi.patch"
   });
 }
@@ -8,7 +8,7 @@ if (Meteor.isClient) {
 TutorialRegistry.registerTutorial("intermediate", {
   title: "Intermediate Meteor",
   subtitle: "Build a recipe app with Scott from Level Up Tutorials",
-  tutorialSourceLink: "github.com/meteor/tut",
+  tutorialSourceLink: "github.com/ShavonnahTiera/intermediate",
   steps: [
     {
       title: 'What we are creating',

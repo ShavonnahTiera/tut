@@ -1,4 +1,4 @@
-{{#template name="intermediate-step2"}}
+{{#template name="intermediate-step21"}}
 
 # Building the Shopping List
 

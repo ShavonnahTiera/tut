@@ -19,7 +19,7 @@ To ensure we've wired up our `click` event correctly we'll test to see if the Ja
 
 Watch: [Create events for the toggle button](https://youtu.be/DuRcJS72Eqo?t=2m28s "Level Up Tutorials: Intermediate Meteor Tutorial #18 - Youtube")
 
-### Allow users to update the collection
+### Allow users to update the collection 
 
 When the user toggles the add and remove fromm menu buttons, we want to update the `inMenu` value in our database to the opposite of its saved value. Since we are updating our database from the client, we have to update our `Recipes.allow();` function to accept changes from our user.
 

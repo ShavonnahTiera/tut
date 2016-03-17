@@ -1,5 +1,4 @@
 {{#template name="intermediate-step01"}}
-
 ### What We're creating
 
 In this tutorial created by Scott Tolinski from [Level Up Tutorials](http://leveluptutorials.com) we'll build a recipe book that allows users to:
@@ -8,19 +7,19 @@ In this tutorial created by Scott Tolinski from [Level Up Tutorials](http://leve
 - Add and remove recipes from a menu
 - Automatically create a shopping list of ingredients from the menu
 
-![alt text][RecipeBook]
-![alt text][NewRecipe]
-![alt text][Menu]
-![alt text][ShoppingList]
+![Recipe Book][RecipeBook]
+![New Recipe][NewRecipe]
+![Menu page][Menu]
+![Shopping List][ShoppingList]
 
 And of course, the app is responsive:
 
-![alt text][Mobile-ShoppingList]
-![alt text][Mobile-RecipeBook]
+![Mobile Shopping List][Mobile-ShoppingList]
+![Mobile Recipe Book][Mobile-RecipeBook]
 
 ### Intermediate Skills
 
-To build out our Recipe Book app, we'll take advantage of the instant updating that comes out-of-the-box with meteor to instantly add new ingredients to the shopping list. Additionally, we'll work with a feature focused file structure to organize our code.
+To build out our Recipe Book app, we'll take advantage of the instant updating that comes out-of-the-box with meteor to instantly add new ingredients to the shopping list. Additionally, we'll work with a feature focused file structure to organize our code. 
 
 Meteor has a robust package community and we'll use several to help us quickly and efficiently build out our app. We'll use `AutoForm` to generate our recipe forms, `simple-schema` to create schemas for our Recipes collection and handle routing with `FlowRouter`. That's not all. We'll work with `reactive-var` to add reactivity to variables that manage our recipe editing feature and add Google analytics to our routes to track user engagment.
 
@@ -36,5 +35,4 @@ There's a lot to learn so let's dive in.
 [HomeLayout]: /images/HomeLayout.png
 [Mobile-ShoppingList]: /images/Mobile-ShoppingList.png
 [Mobile-RecipeBook]: /images/Mobile-RecipeBook.png
-
 {{/template}}
