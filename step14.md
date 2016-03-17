@@ -4,7 +4,7 @@
 
 Now that we have a listing of all of our recipes submitted through our autoform, let's build an individual reciepe page. On that page, you can view a recipe based on the unique Mongo `_id` of the recipe stored as a parameter of the url.
 
-```
+`
 localhost:3000/recipe/u04cqhcq8sW    # u04cqhcq8sW is the unique Mongo _id`
 
 ### Adding a link to a route

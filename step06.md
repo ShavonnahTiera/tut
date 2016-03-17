@@ -8,7 +8,7 @@ In this project we're using `aldeed:collection2` and `aldeed:autoform` packages 
 
 In your `collections` folder create a file `Recipes.js`.
 
-{{> DiffBox tutorialName="intermediate" step="6.1"}}
+<!-- {{> DiffBox tutorialName="intermediate" step="6.1"}} -->
 
 On line 1, we create a Collection like normal with `Recipes = new Meteor.Collection('recipes');
 `. Starting on line 3, we begin to create a schema based on the fields we'll use in our recipe app.
