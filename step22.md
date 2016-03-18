@@ -30,7 +30,7 @@ Watch: [Add a helper for the update form](https://youtu.be/BTMrwey7UXQ?t=3m15s "
 
 Instead of having to click '+' each time you update the form, we can use the `autosave` property from autoForm.
 
-{{> DiffBox tutorialName="intermediate" step="22.3"}}
+<!-- {{> DiffBox tutorialName="intermediate" step="22.3"}} -->
 
 Now each time the user presses enter or changes the focus from the field, it will update the `Recipes` collection automatically and show up reactively in the recipe list.
 
