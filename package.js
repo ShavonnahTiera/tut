@@ -51,7 +51,7 @@ Package.onUse(function (api) {
     'step24.md',
     'step25.md',
 
-    'generated/intermediate.multi.patch',
+    'generated/intermediate.multi.patch'
   ], 'client');
 
   api.export('TUTORIAL_PAGES');
