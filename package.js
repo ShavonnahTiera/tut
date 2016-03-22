@@ -1,3 +1,4 @@
+
 Package.describe({
   summary: 'Advanced tutorial content',
   version: '0.0.1',
@@ -21,7 +22,7 @@ Package.onUse(function (api) {
   ]);
 
   api.addFiles([
-    'metadata.js'
+    'metadata.js',
   ]);
 
   api.addFiles([
@@ -30,7 +31,6 @@ Package.onUse(function (api) {
     'step03.md',
     'step04.md',
     'step05.md',
-    'step06.md',
     'step07.md',
     'step08.md',
     'step09.md',
@@ -57,5 +57,5 @@ Package.onUse(function (api) {
   api.export('TUTORIAL_PAGES');
 
   api.export('INTERMEDIATE_TUT');
-  
+
 });
