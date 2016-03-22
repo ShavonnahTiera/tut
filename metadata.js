@@ -26,7 +26,7 @@ TutorialRegistry.registerTutorial("intermediate", {
       template: 'intermediate-step03'
     },
     {
-      title: 'Basid Layouts with FlowRouter',
+      title: 'Basic Layouts with FlowRouter',
       slug: "basic-layouts",
       template: 'intermediate-step04'
     },
