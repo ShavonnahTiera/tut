@@ -17,11 +17,11 @@ Package.onUse(function (api) {
     'ecmascript',
     'mdg:tutorial-step-diff-compiler@0.1.0',
     'mdg:tutorial-diff-box@0.3.0',
-    'mdg:tutorial-registry@0.1.1',
+    'mdg:tutorial-registry@0.1.1'
   ]);
 
   api.addFiles([
-    'metadata.js',
+    'metadata.js'
   ]);
 
   api.addFiles([
