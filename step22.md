@@ -20,7 +20,6 @@ Watch: [Create a quickForm to update the recipes](https://youtu.be/BTMrwey7UXQ "
 It is important to know what context your app is in when you are building an app. In the case of our helper function for `updateRecipeId` we want to return the `_id` of the currently looped over recipe with `this._id`. If we use the arrow funcion `()=>` the scope of `this` changes. Instead we'll call a regular `function()` that doesn't change the context of `this`.
 
 
-<!-- recipe.js -->
 {{> DiffBox tutorialName="intermediate" step="22.2"}}
 
 Watch: [Add a helper for the update form](https://youtu.be/BTMrwey7UXQ?t=3m15s "Level Up Tutorials: Intermediate Meteor Tutorial #22 - Youtube")
