@@ -1,6 +1,6 @@
 Package.describe({
   summary: 'Advanced tutorial content',
-  version: '0.0.1',
+  version: '0.0.2',
   name: 'intermediate-meteor'
 });
 
