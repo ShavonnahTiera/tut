@@ -1,7 +1,5 @@
 #! /usr/bin/env ruby
 
-require 'json'
-
 # Goal: go through a repository, parse titles of the form:
 # Step 8.2: Step content
 #
@@ -17,7 +15,7 @@ require 'json'
 
 view_type = ARGV[0]
 
-tutorial_root = File.realpath(File.join File.dirname(__FILE__))
+tutorial_root = File.realpath(File.join File.dirname(__FILE__), "..")
 
 repo = File.join tutorial_root, "code"
 out_patch_file = File.join tutorial_root, "generated", ("intermediate.multi.patch")

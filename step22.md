@@ -2,7 +2,7 @@
 
 # Updating with a QuickForm
 
-Looking back at our app up to now we have routes and templates for all of our pages completed. On our `http://localhost:3000/recipe-book` page you'll notice that there is no way to update the individual recipes. Let's program a way to update each recipe. 
+Looking back at our app up to now we have routes and templates for all of our pages completed. On our `http://localhost:3000/recipe-book` page you'll notice that there is no way to update the individual recipes. Let's program a way to update each recipe.
 
 <!-- Recipe.html -->
 {{> DiffBox tutorialName="intermediate" step="22.1"}}
@@ -10,7 +10,7 @@ Looking back at our app up to now we have routes and templates for all of our pa
 We can use a quickForm to update the recipes, just as we used one to insert the recipes in the first place. The differences from the previous quickForm are:
 
 - `id=updateRecipeId` - we'll crate a helper for this form instead of using a css id property,
-- `type="update"` - 
+- `type="update"` -
 - `doc=this` - This `Recipe` template is within an `{{dstache}}#each}}` loop. The MongoDB `doc` we update will be the current item, `this` in the loop.
 
 Watch: [Create a quickForm to update the recipes](https://youtu.be/BTMrwey7UXQ "Level Up Tutorials: Intermediate Meteor Tutorial #22 - Youtube")
@@ -30,7 +30,7 @@ Watch: [Add a helper for the update form](https://youtu.be/BTMrwey7UXQ?t=3m15s "
 
 Instead of having to click '+' each time you update the form, we can use the `autosave` property from autoForm.
 
-<!-- {{> DiffBox tutorialName="intermediate" step="22.3"}} -->
+{{> DiffBox tutorialName="intermediate" step="22.3"}}
 
 Now each time the user presses enter or changes the focus from the field, it will update the `Recipes` collection automatically and show up reactively in the recipe list.
 
