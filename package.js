@@ -25,6 +25,17 @@ Package.onUse(function (api) {
     'metadata.js',
   ]);
 
+  api.addAssets([
+    'images/RecipeBook.png',
+    'images/NewRecipe.png',
+    'images/EditRecipe.png',
+    'images/Menu.png',
+    'images/ShoppingList.png',
+    'images/HomeLayout.png',
+    'images/Mobile-RecipeBook.png',
+    'images/Mobile-ShoppingList.png',
+  ], 'client');
+
   api.addFiles([
     'step01.md',
     'step02.md',

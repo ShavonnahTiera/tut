@@ -27,12 +27,12 @@ There's a lot to learn so let's dive in.
 
 [Level Up Tutorials Intermediate Meteor Youtube](https://www.youtube.com/watch?v=BI8IslJHSag&list=PLLnpHn493BHFYZUSK62aVycgcAouqBt7V)
 
-[RecipeBook]: /images/RecipeBook.png
-[NewRecipe]: /images/NewRecipe.png
-[EditRecipe]: /images/EditRecipe.png
-[Menu]: /images/Menu.png
-[ShoppingList]: /images/ShoppingList.png
-[HomeLayout]: /images/HomeLayout.png
-[Mobile-ShoppingList]: /images/Mobile-ShoppingList.png
-[Mobile-RecipeBook]: /images/Mobile-RecipeBook.png
+[RecipeBook]: /packages/intermediate-meteor/images/RecipeBook.png
+[NewRecipe]: /packages/intermediate-meteor/images/NewRecipe.png
+[EditRecipe]: /packages/intermediate-meteor/images/EditRecipe.png
+[Menu]: /packages/intermediate-meteor/images/Menu.png
+[ShoppingList]: /packages/intermediate-meteor/images/ShoppingList.png
+[HomeLayout]: /packages/intermediate-meteor/images/HomeLayout.png
+[Mobile-ShoppingList]: /packages/intermediate-meteor/images/Mobile-ShoppingList.png
+[Mobile-RecipeBook]: /packages/intermediate-meteor/images/Mobile-RecipeBook.png
 {{/template}}
